@@ -105,9 +105,22 @@
 \setcounter{page}{1}
 \rhead{\thepage}
 \section{Introduction}
-\blindtext[2]
-\section{General overview of the the public cloud}
-\blindtext[2]
+This thesis is about coming up with the self-assessment and auditing mechanism for applications that are either already deployed in public cloud or for applications that are candidates for such deployments. By being seen as flexible, reliable and cost effective mean of application delivery it is no wonder that the usage of cloud computing has spread far and wide.
+Yet, there are usecases where public cloud platforms might not be optimal, feasible or, in some cases, allowed options for deployment. This paper was written to better understand the implications of cloud computing versus the requirements of certain official security, confidentiality, integrity and availability requirements, some of which are actual hard requirements set by Finnish officials and some that are more like recommendations and best practices. To make the matter even more complex there are several providers who sell public cloud. For the most part, the goods being offered are fairly similar or at least they provide the same basic building block upon to build ones application. Still, there are differences that could effect on the audit result that determines whether the particular application is a good candidate for cloud deployment, one example of such difference might different connectivity options for attaching the users to the cloud application, another example could be the layers provided by the services provider for building the defence in depth setting that is seen as a good practice. These small, but important differences need to be evaluated when determining if the application is a good candidate for cloud deployment at all and what provider or providers to select for the actual application deployment.
+\par
+This thesis starts by building up the basis of what is cloud computing and what it is made of, what kind of different cloud service categories are available currently and we'll also discuss some of the deployment models of cloud computing. Some emphasis is also put on the application design required to better exploit the possibilities of cloud by means of using stateless micro services with containers and orchestration tools. Security aspects of each of the factors and what they bring into the table are considered from the classical CIA-perspective, eg. Confidentiality, Integrity and Availability. Last portions of this thesis consist of the self-assessment questionaire and the audit criteria. These two can be used to assess application for cloud deployment and on the other hand to audit already existing application.
+\section{General overview of cloud services}
+Cloud service is generally understood as a product consisting of outsourced IT infrastructure, software components and some means for the customer to manage the service. Also, cloud services tend to have scalability built-in in terms of having some for of pay-as-you-grow -model, meaning that the customer can start off some amount of capacity but increase the deployment size as their requirements change, same is true for down scaling the capacity to avoid unused capacity overhead.
+Avoiding costs is seen as one of the major benefits of cloud computing as many of the costly bits and bobs of IT infrastructure and related personnel can in many cases be outsourced. This means things including, but not limited to:
+\begin{description}
+	\item[$\bullet$ Datacenter facilities]
+	\item[$\bullet$ Electricity, cooling etc.]
+	\item[$\bullet$ Computer hardware]
+	\item[$\bullet$ Operating systems to run on the hardware]
+	\item[$\bullet$ Storage systems]
+	\item[$\bullet$ Internet facing connectivity]
+\end{description}
+This makes cloud computing seem like an ideal option for certain use cases where company has no interest of hosting the infrastructure on their own. Instead of maintaining the above mentioned infrastructure, company can concentrate on they key business be it application development or the sales generated from their Internet shop. This is not always the case tho, as we've discovered in later parts of this thesis.
 \subsection{Cloud terminology and concepts}
 Next we'll cover some of the generic concepts and basic terminology involved in cloud computing.
 At the time of writing the cloud services can be split into three rough main categories (What is cloud computing Microsoft Azure 2018), and we'll discuss each of the aforementioned categories separately bellow. It should be noted that the categories below are subject to change as the cloud computing evolves and also there will likely be overlap in real life scenarios. Example of such overlap could be PaaS service providing Kubernetes workflow automation while at the same time Kubernetes itself could be seen as a SaaS service.
