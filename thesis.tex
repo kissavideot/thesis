@@ -1,0 +1,243 @@
+
+\documentclass{article}
+\usepackage[nottoc,numbib]{tocbibind}
+%\usepackage[nottoc]{tocbibind}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage[
+	margin=1.5in,
+	footskip=1.2in
+	]{geometry}
+\usepackage{fancyhdr}
+\usepackage{mwe}
+\usepackage{graphbox}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{xcolor}
+\lstset {
+	breaklines=true
+}
+\usepackage{tocloft}
+%JAMK custom color, used to print The Line
+\definecolor{JamkBlue}{rgb}{0,90,125}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+
+%Title page needs special attention: line in the left
+\fancypagestyle{TitlePage}
+{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}	
+	\lhead{
+		\begin{tabular}[t]{l@{\hspace{3cm}}l}	
+		\includegraphics[scale=0.22]{jamk-logo}
+		\end{tabular}	
+		}
+	\newgeometry{left=4cm}	
+	\cfoot{\includegraphics[valign=B,scale=1.2]{jamk-footer} }	
+}
+
+%clear headers&footers
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+%insert jamk -footer logo to each page
+%\cfoot{\includegraphics[valign=B,scale=1.2]{jamk-footer} }
+\setmainfont{Carlito-Regular}
+\parskip = \baselineskip
+\usepackage[parfill]{parskip}
+ 
+\begin{document}
+\onehalfspacing
+\begin{titlepage}
+\thispagestyle{TitlePage}
+    \vfill
+    \begin{tabular}[t]{l@{\hspace{0cm}}l}
+     &
+     \begin{tabular}[t]{p{0.85\textwidth}}
+     \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+     \textbf{\Large {How to self-assess and audit application deployment in public cloud? }} \\ [2cm]
+	\large{Pinja Koskinen} \\	
+	\large{Vesa Simola} \\
+       { \date{ } }  
+	\\ \\ \\ \\ \\ \\ \\ \\ \\
+	\large{Masters thesis}\\
+	\large{XXXXX 2018}\\
+	\large{Cyber security}\\
+	\large{Master's degree programme in cyber security}
+	\end{tabular}
+    \end{tabular}
+
+\end{titlepage}
+
+\clearpage 
+\begin{table}[]
+\centering
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Author(s)\\ Pinja Koskinen, Simola, Vesa\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Type of publication\\ Masters thesis\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Date\\ Month Year\end{tabular}                  \\ \cline{3-3} 
+                                                                                        &                                                                                                & \begin{tabular}[c]{@{}l@{}}Language of publication:\\ English\end{tabular} \\ \cline{2-3} 
+                                                                                       & Number of pages                                                                                & Permission for web publication: x                                          \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Title of publication\\ Title\\ possible subtitle\end{tabular}}                                                                                                                                                       \\ \hline
+\multicolumn{3}{|l|}{Degree programme}                                                                                                                                                                                                                                \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Supervisor(s)\\ Last name, First name\end{tabular}}                                                                                                                                                                  \\ \hline
+\multicolumn{3}{|l|}{Assigned by}                                                                                                                                                                                                                                    \\ \hline
+\multicolumn{3}{|l|}{\multirow{5}{*}{Abstract}}                                                                                                                                                                                                                      \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\doublespacing
+\tableofcontents
+%Insert page number to right upper corner (header)
+\pagebreak 
+\setcounter{page}{1}
+\rhead{\thepage}
+\section{Introduction}
+\blindtext[2]
+\section{General overview of the the public cloud}
+\blindtext[2]
+\subsection{Cloud terminology and concepts}
+Next we'll cover some of the generic concepts and basic terminology involved in cloud computing.
+At the time of writing the cloud services can be split into three rough main categories (What is cloud computing Microsoft Azure 2018), and we'll discuss each of the aforementioned categories separately bellow. It should be noted that the categories below are subject to change as the cloud computing evolves and also there will likely be overlap in real life scenarios. Example of such overlap could be PaaS service providing Kubernetes workflow automation while at the same time Kubernetes itself could be seen as a SaaS service.
+This overlap is natural result of the categories building on top of each other.
+We'll also touch the few options for hosting the the cloud, either as a completely outsourced service, inhouse and the mixture of the two.
+Security and availability aspects of the categories and their hosting options are discussed in detail later in this document. 
+\subsubsection{Infrastructure-as-a-service, IaaS}
+This is the basic, and possibly most familiar service where one rents computing capacity in a form of facilities that house hardware, virtual machines, storage capacity and network bandwidth.
+Operating systems and some core infrastructure services such as NFS storage or firewalls could be provided as part of the service. This category of cloud computing provides the basic pay-as-you-grow -model in terms of giving the customer the opportunity to scale their number of virtual machines, storage capacity or pretty much any of the basic building blocks.
+It should also be noted that while service provider can have multiple geographical sites from which they provide their service allowing distribution of the resources this does not mean that the applications running on top of the IaaS infrastructure can exploit these capabilities automatically.
+Also, workload management and scaling is to be done manually. Some of these limitations are addressed in the categories discussed next.
+\subsubsection{Platform-as-a-service, PaaS}
+As stated above IaaS does not address the many of the scalability issues or automation challenges faced by organizationsi.
+PaaS on the other hand aims to automate the provisioning procedures for the virtual machines and containers that actually run the application.
+Containers are relatively new concept in computing but they are used to package the application and its dependencies in to a manageable units for distribution and running in cloud platform. (What is a container? Docker documentation 2018).
+These containers can be housed in orchestration tools such as Kubernetes or Docker swarm that are the main service provided by PaaS category of cloud computing. 
+Usually PaaS service includes the IaaS services as well, but this is not a given.
+\subsubsection{Software-as-a-service, SaaS}
+Software as a service is a method of delivering software application from cloud via Internet connectivity with the least amount of manual work from customer.
+Example that illustrates the stacking of cloud services and the SaaS could be a email service that has its customer specific frontends running in containers on service provider orchestration tool that utilizes virtual machines housed in service provider facilities  and hypervisors somewhere.
+End user is reliefed of many of the IT administration tasks related to this kind of service and the user interface for SaaS application is usually a web browser.
+\subsubsection{Differences between public -and private cloud}
+\blindtext[2]
+\subsubsection{Mixtures of the two, aka hybrid cloud}
+\blindtext[2]
+\subsubsection{Private, traditional data centers and cloud}
+\blindtext[2]
+\section{Security in cloud}
+\blindtext[2]
+\subsection{Introduction to security aspects in cloud}
+\blindtext[2]
+\subsection{Security aspects of application development in public cloud}
+\blindtext[2]
+\subsection{Introduction to cloud security and application deployment}
+\blindtext[2]
+\subsubsection{Source code control in cloud application development}
+\blindtext[2]
+\subsubsection{Secure processes for updating application and library code}
+\blindtext[2]
+\subsubsection{Secure application administration procedures}
+\blindtext[2]
+\subsection{Security and availability benefits}
+\blindtext[2]
+\subsubsection{Outsources datacenter}
+\blindtext[2]
+\subsubsection{Outsourced server etc. infrastructure, either partially or wholly}
+\blindtext[2]
+\subsubsection{Large cloud providers are certified, are they?}
+\blindtext[2]
+\subsubsection{Option for building redundant applications in geographically distributed manner}
+\blindtext[2]
+\subsubsection{Strong authentication mechanics easily available for administrative purposes}
+\blindtext[2]
+\subsection{Security and availability cons of cloud deployments}
+\blindtext[2]
+\subsubsection{Privacy implications of running application in cloud}
+\blindtext[2]
+\subsubsection{Dependant to external 3rd party provider}
+\blindtext[2]
+\subsubsection{Dependency to connectivity}
+\blindtext[2]
+\subsubsection{Application security cannot be outsourced even in SaaS}
+\blindtext[2]
+\subsubsection{System security cannot be outsourced in IaaS}
+\blindtext[2]
+\section{Self-assessment of cloud security posture}
+\blindtext[2]
+\subsection{What is self-assessment of security and why bother?}
+\blindtext[2]
+\subsection{Self-assessment questionnaire}
+\blindtext[2]
+\subsubsection{Main points of interest and reasoning behind assessment questions}
+\blindtext[2]
+\section{Auditing application deployment in cloud}
+\blindtext[2]
+\subsection{Classified data: to cloud or not?}
+\blindtext[2]
+\subsection{Overview of audit criteria for cloud environment}
+\blindtext[2]
+\section{Conclusions}
+\blindtext[2]
+\subsection{Complexity and applicability of audit criteria}
+\blindtext[2]
+\subsection{Review of assement and criteria}
+\blindtext[2]
+\subsection{Further developments}
+\blindtext[2]
+\begin{thebibliography}{9}
+\makeatletter
+\def\@biblabel#1{}
+\let\old@bibitem\bibitem
+\def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
+\makeatother
+
+\bibitem{Secure and Privacy-Aware Data Dissemination for Cloud-Based Applications}
+	Lilia Sampaio,
+	Fábio Silva,
+	Amanda Souza,
+	Andrey Brito,
+	Pascal Felber
+	Secure and Privacy-Aware Data Dissemination		
+	March 2018
+
+\bibitem{i2kit: A Tool for Immutable Infrastructure
+Deployments based on Lightweight Virtual
+Machines specialized to run Containers}
+	Pablo Chico de Guzman,
+	Felipe Gorostiaga,
+	Cesar Sanchez
+	i2kit: A Tool for Immutable Infrastructure Deployments based on Lightweight Virtual Machines specialized to run Containers
+	Feb 2018 
+
+\bibitem{About being the Tortoise or the Hare? A Position Paper on Making Cloud Applications too Fast and Furious for Attackers}
+	Nane Kratzke
+	About being the Tortoise or the Hare? A Position Paper on Making Cloud Applications too Fast and Furious for Attackers
+	Feb 2018
+
+\bibitem{rfc3432 - Network performance measurement with periodic streams}
+	V. Raisanen,
+	G. Grotefeld,
+	A. Morton
+	Network performance measurement with periodic streams	
+	Nov 2002
+
+\bibitem{Pilvipalveluiden turvallisuus - Mitä organisaatioiden tulisi huomioida pilvipalveluja hyödyntäessä}
+	Finnish Communication Regulatory Authority
+	Pilvipalveluiden turvallisuus - Mitä organisaatioiden tulisi huomioida pilvipalveluja hyödyntäessä
+\bibitem{Ohje 5/2014 Pilvipalveluiden turvallisuus}
+	Finnish Communication Regulatory Authority
+	Ohje 5/2014 Pilvipalveluiden turvallisuus
+	May 2014	
+\end{thebibliography}
+\end{document}

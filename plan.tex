@@ -1,0 +1,153 @@
+
+\documentclass{article}
+\usepackage[nottoc,numbib]{tocbibind}
+%\usepackage[nottoc]{tocbibind}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage[
+	margin=1.5in,
+	footskip=1.2in
+	]{geometry}
+\usepackage{fancyhdr}
+\usepackage{mwe}
+\usepackage{graphbox}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{xcolor}
+\lstset {
+	breaklines=true
+}
+\usepackage{tocloft}
+%JAMK custom color, used to print The Line
+\definecolor{JamkBlue}{rgb}{0,90,125}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+
+%Title page needs special attention: line in the left
+\fancypagestyle{TitlePage}
+{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}	
+	\lhead{
+		\begin{tabular}[t]{l@{\hspace{3cm}}l}	
+		\includegraphics[scale=0.22]{jamk-logo}
+		\end{tabular}	
+		}
+	\newgeometry{left=4cm}	
+	\cfoot{\includegraphics[valign=B,scale=1.2]{jamk-footer} }	
+}
+
+%clear headers&footers
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+%insert jamk -footer logo to each page
+%\cfoot{\includegraphics[valign=B,scale=1.2]{jamk-footer} }
+\setmainfont{Carlito-Regular}
+\parskip = \baselineskip
+\usepackage[parfill]{parskip}
+ 
+\begin{document}
+\onehalfspacing
+\begin{titlepage}
+\thispagestyle{TitlePage}
+    \vfill
+    \begin{tabular}[t]{l@{\hspace{0cm}}l}
+     &
+     \begin{tabular}[t]{p{0.85\textwidth}}
+     \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+     \textbf{\Large {Research plan for  Masters thesis: How to self-assess and audit application deployment in public cloud? }} \\ [2cm]
+	\large{Pinja Koskinen} \\	
+	\large{Vesa Simola} \\
+       { \date{ } }  
+	\\ \\ \\ \\ \\ \\ \\ \\ \\
+	\large{Masters thesis}\\
+	\large{XXXXX 2018}\\
+	\large{Cyber security}\\
+	\large{Master's degree programme in cyber security}
+	\end{tabular}
+    \end{tabular}
+
+\end{titlepage}
+
+\clearpage 
+\begin{table}[]
+\centering
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Author(s)\\ Simola, Vesa\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Type of publication\\ Research plan\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Date\\ Month Year\end{tabular}                  \\ \cline{3-3} 
+                                                                                        &                                                                                                & \begin{tabular}[c]{@{}l@{}}Language of publication:\\ English\end{tabular} \\ \cline{2-3} 
+                                                                                       & Number of pages                                                                                & Permission for web publication: x                                          \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Title of publication\\ Title\\ possible subtitle\end{tabular}}                                                                                                                                                       \\ \hline
+\multicolumn{3}{|l|}{Degree programme}                                                                                                                                                                                                                                \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Supervisor(s)\\ Last name, First name\end{tabular}}                                                                                                                                                                  \\ \hline
+\multicolumn{3}{|l|}{Assigned by}                                                                                                                                                                                                                                    \\ \hline
+\multicolumn{3}{|l|}{\multirow{5}{*}{Abstract}}                                                                                                                                                                                                                      \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\doublespacing
+\tableofcontents
+%Insert page number to right upper corner (header)
+\pagebreak 
+\setcounter{page}{1}
+\rhead{\thepage}
+\section{Introduction and reasoning behind the topic selection}
+Topic of the thesis is "How to self-assess and audit application deployment in public cloud?". This topic was chosen as there wasn't not too much documentation concerning this area, especially from the point-of-view of official recommendations and guidelines for public sector and on the other hand some of the requirements differ greatly from the requirements of the private sector. This area is also in the short-list of interesting things within the IT for both authors, either as a integral part of work we do on daily basis or as a hobby.
+Thesis is to be done together with Finnish cyber security center and/or yet unannounced academic institution heavily relying in high performance computing and similarly tuned cloud environment. 
+\section{Research method and the goals set for this thesis}
+Research aspect of this thesis is to be done based on various related documents provided by officials, vendors and individual contributors. Documentation available will be mapped against the CIA structure (confidentiality, integrity and availability) as this gives us a framework to benchmark the documentation, helps us with the scoping and on the other hand supports the main goal of this thesis. Main goal being to compare the different documentations and to come up with a feasible baseline for how to assess application deployment. Finally, we'll create a check-list type questionnaire that hopefully can be used to assess the feasibility of particular application deployment based on the criteria.
+\par
+The analysis of the outcome is to be done by testing the assessment and audit questionnaire against existing and or new cloud application deployments.
+Assessment is to be done by authorized cyber security officers or by academics for confidentiality in the high performance computing field utilizing the cloud environment on research data. In both cases the assessment of the criteria feasibility is to be done based on usability of the questionnaire and subject matter content, leaving room for further development.
+\subsection{Topical questions we hope to answer}
+Following is the list of main questions we'll try to answer within the thesis project.
+\begin{description}
+	\item[$\bullet$ What is meant by cloud environment?]
+	\item[$\bullet$ What are the main topical points of interest with a cloud context?]
+	\item[$\bullet$ What are the main threats for availability when application is in cloud?]
+	\item[$\bullet$ How to privacy and confidentiality map out in cloud?]
+	\item[$\bullet$ What are the main benefits gained by using cloud?]
+	\item[$\bullet$ What are the main down sides received by using cloud?]
+	\item[$\bullet$ How to roughly assess and audit application deployment in public cloud?]
+\end{description}
+\subsection{Scoping}
+To keep the thesis coverage reasonable and within the abilities of the authors we opted to concentrate on mostly high-to-medium level technical topics within the cloud landscape.
+Hence, the commercial, juridical and contractual aspects of cloud services are not discussed in detail while few key aspects of these topics are mentioned as they are critical part of fluent deployment. While the aforementioned aspects where scoped out this still leaves us with plenty of ground to cover with the technical topics as seen in the attached thesis.pdf.
+It is also to be stated that while both of the authors have technical experience in the subject matter we would not have had enough knowledge and time on our hands to gain enough information about the contract and purely business related aspects of the topic.
+\par
+Leaving out the commercial and business aspects obviously means that the self-assessment and audit proposed by the thesis are not 100% complete and leave room for further development.
+\section{Gathering of information}
+As stated before there is not whole lot of documentation that is directly concerning the topic. Still, we've found few good sources of information that are either directly related or that are deemed close enough to suit our purposes.
+Namely, least the following sources are to be used:
+\begin{description}
+	\item[$\bullet$ Documents and papers available in Cornell University Library (arxiv.org)]
+	\item[$\bullet$ RFC documentation]
+	\item[$\bullet$ Vendor reference documents: Openstack, Linux, FreeBSD, Amazon etc.]
+	\item[$\bullet$ Papers and guides provided by the National Cyber Security Center Finland (NCSC-FI)]
+	\item[$\bullet$ Papers and guides provided by the Finnish Communication Regulatory Authority (FICORA)]
+	\item[$\bullet$ Papers and guides provided by the office of the Data protection ombudsman]
+\end{description}	 
+These sources provide information in freely available form and this is one major criteria for us.
+Relevant material can be found using search terms such as "cloud security", "system availability","GDPR" and so forth either directly from the websites of the aforementioned organizations or by using the all knowing and all seeing eye of the oracle. 
+\subsection{So yes, there is information but how to create new value out of it?}
+By combining the multiple sources mentioned together with each other and authors practical knowledge of the substance matter we expect to create new form of documentation that not only provides the theoretical basis but also practical assessment and audit tool as a form of a questionnaire.
+\section{Few words on schedule for the thesis}
+Thesis is hopefully done during the summer 2018 as we expect the writing itself being quite fluent and straight forward given the amount of documentation and knowledge available. Seminar location and time is open at the time of writing as authors are preparing to move abroad. Yet, this gives a possibility of presenting the thesis in rather distinguished academic location in central Europe for audience that is utilizing cloud for high performance computing on privacy sensitive data.
+\section{Resources required}
+No additional resources are required as work is done based on freely available information.
+\section{Preliminary table of contents and thesis}
+Companion document called "thesis.pdf" contains the preliminary thesis and some of references found.
+\end{document}
