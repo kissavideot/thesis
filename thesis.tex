@@ -195,7 +195,16 @@ For some implementations it would be ideal to combine the two, private and publi
 \subsubsection{Dependant to external 3rd party provider}
 \blindtext[2]
 \subsubsection{Dependency to connectivity}
-\blindtext[2]
+Since application is running the remote location it is obvious that connectivity is of paramount importance, in essense, having no connectivity in the campus means having no application and this can mean having no business. While many organizations have Internet connectivity these days it is still surprisingly uncommon for organizations to have backup connectivity if the unthinkable cut happens. Fiber cuts are not all that uncommon (Teddy Hayford-Acquah and Ben Asante, 2017) and while carrier backbone networks data center connections tend to be redundant in design, the so called "last mile" connection from service provider point-of-presence to customer can be a single point of failure. These non-redundant links can cause catastrophic failures when cut happens during business hours. There are couple of approaches to mitigate the availability issue presented by these failures as disscussed next.
+\par
+To reduce the impact of last mile failure it is common practice to have two physically separate lines from service provider, terminated to two separate customer premisses routers in two separate equipment rooms. (Gunnar Bøe, Vidar Faltinsen, Einar Lillebrygfjeld, 2011) Two routers using VRRP protocol act in active-passive manner to provide so-called first-hop redundancy (rfc5798, 2010). This approach, when combined with physically separate lines, provides protection from fiber cuts on the last mile and this also protects from power supply failures in the customer premisses router and also acts as a backup connection during router software upgrades and some configuration changes.
+However, this method does not protect against catastrophic failures in the service provider network. To accomplish this, it is required to have similarly separated lines and routers from two separate service providers. Assuming that the customer has some IP block(s) to announce over BGP and that the service providers are accepting the customer IP block(s) for transit it is possible to create fully redundant last mile connectivity. All these relatively complex and expensive requirements are likely the reason why organizations wont purchase redundant connectivity but instead accept the risk of significant business impact and downtime. (Packetworks, 2016).
+\par
+Similarly, if cloud application is running in a "stretched" network infrastructure, eg. data center interconnect, it is essential that the interconnect is built in redundant fashion. While redundancy is all good it can also cause failures of different kind, but with equally potential for catastrophy (Pepelnjak, 2011) as we'll discuss next. 
+\par
+As most of the applications - in cloud, or otherwise - rely on IP connectivity it is unfortunate misconception that the underlying connectivity from two or more data centers and between datacenters is a given and identical. Having separate IP networks in data centers means that the server, container or whatever running the application looses its connectivity during workload transfer without reconfiguration of IP address and possibly DNS. Classic solution is to leave out the IP from the equation and simply strech the OSI layer 2 ethernet via means of OSI layer 1 technology to two or more datacenters. Given the broadcast nature of ethernet and how it behaves during loops this could be seen as a simple but dangerous approach that effectively stretches the data center but at the same time creates a large failure domain, eg. the feat of fate sharing if one data center has a loop the other one goes down as well. This is especially bad for applications that rely on OSI layer 2 signalling, such as redundant routers and firewalls (Pepelnjak, 2011). This problem with location redundancy could be solved by making the application layer not so reliant on the underlying IP layer, this could be done for example by advertising the service address - eg. the address where the service is listening - to data center routers via BGP. This kind of approaches have apparently been deemed as non-trivial and time consuming tasks so currently it would appear that the accepted solution is to introduce more complexity outside the application to hide the underlying already existing complexity of IP transport. One such method is overlay networking, such as VXLAN, that builds up a streched OSI layer 2 domain over routed network (rfc7348).
+\par
+Above has been all about IP applications, yet majority of classical applications require storage to function. This means that storage has to be mirror or replication as well.
 \subsubsection{Application security cannot be outsourced even in SaaS}
 \blindtext[2]
 \subsubsection{System security cannot be outsourced in IaaS}
@@ -278,5 +287,42 @@ Machines specialized to run Containers}
 	Finnish ministry of finance
 	Vahtiohje - Vaatimukset tekniselle tietotekniikkaympäristölle.
 	Published on https://www.vahtiohje.fi/web/guest/vaatimukset-tekniselle-tietotekniikkaymparistolle
+\bibitem{Causes of Fiber Cut and the Recommendation to Solve the Problem}
+	Causes of Fiber Cut and the Recommendation to Solve the Problem
+	Teddy Hayford-Acquah
+	Ben Asante
+	2017
+\bibitem{Distributed firewalls: how badly do you want to fail?}
+	Distributed firewalls: how badly do you want to fail?
+	Ivan Pepelnjak
+	2011
+\bibitem{Recommendations for a redundant campus network}
+	GEANT
+	Recommendations for a redundant campus network
+	Gunnar Bøe
+	Vidar Faltinsen
+	Einar Lillebrygfjeld
+	2011
+\bibitem{The risks of not having business Internet redundancy}
+	Packetworks
+	Published on http://www.packetworks.net/blog/the-risks-of-not-having-business-internet-redundancy.htm
+	2016
+\bibitem{rfc7348 - VXLAN}
+	IETF
+	VXLAN
+	M. Mahalingam
+	D. Dutt
+	K. Duda
+	P. Agarwal
+	L. Kreeger
+	T. Sridhar
+	M. Bursell
+	C. Wright
+	August 2014
+\bibitem{rfc5798}
+	IETF
+	VRRP
+	S. Nadas
+	
 \end{thebibliography}
 \end{document}
