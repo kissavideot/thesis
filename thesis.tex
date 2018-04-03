@@ -144,21 +144,21 @@ Example that illustrates the stacking of cloud services and the SaaS could be a 
 End user is reliefed of many of the IT administration tasks related to this kind of service and the user interface for SaaS application is usually a web browser.
 \subsubsection{Differences between public -and private cloud}
 There are two different approaches to the clouud deployment in general, private cloud and public cloud. With private cloud the data and services are hosted hardware dedicated to particular end user organization, while public cloud shares the same hardware infrastructure across all the tenants. This is important aspect to understand when planning application deployment to cloud environment as private cloud provides few key security enhancements per default while at the same time some of the main benefits of cloud deminish:
-\begin{selection}
+\begin{description}
 	\item[$\bullet$ CPU and memory is dedicated so computational performance likely more predictable]
 	\item[$\bullet$ Storage performance is easier to predict in terms of IOPS and especially latency]
 	\item[$\bullet$ Vulnerabilities such as recent spectre and meltdown are limited to within one organization]
 	\item[$\bullet$ Network capacity is easier to predict and it is possible to have less latency if housed locally]
 	\item[$\bullet$ In some cases, privately housed and managed cloud might be more likely to pass audit for handling classified information]
-\end{selection}
+\end{description}
 First three of the above are fairly obvious, but the notion about using privately housed and managed cloud for audit compliance is worth of few further clarification. Finnish ministry of finance states in the VAHTI that when using shared capacity the organization is leaving the management and control of the platform to service provider. This highlights the  importance for the client organization to have efficient methods and processes for overseeing the service provider and to understand the nature of the information stored in the cloud and to have efficient means of confirming that the service provider acts according to the requirements and contracts. (VAHTIohje, vaatimukset tekniselle tietotekniikkaympäristölle, 2016). This could also be understood so that it is quite possible to run classified application in private cloud and gain all the provisioning benefits, as long as the environment supports the required security controls, management processes and that there are otherwise sustainable technical environment to run the application on. This is true regardless if the private cloud is hosted inside the customer company or physically from service provider facility.
 \par
 Public cloud on the other hand is generally purely shared capacity housed in service provider facilities and usually boasts all the outsourcing benefits within the cloud offering. While some public cloud offerings may have dedicated capacity, it is more often built around the performance factor. Example of this kind of performance oriented offering could be fatnodes with large amounts of RAM or GPU-computation capacity that is rented on hourly basis. That being said, public cloud can provide additional security features that can compensate for the shared infrastructure, like:
-\begin{selection}
+\begin{description}
 	\item[$bullet$ Data encryption at rest as given, with custom encryption keys]
 	\item[$bullet$ Multifactor authentication to cloud management portal]
 	\item[$bullet$ Redundant connectivity from service provider facilities]
-\end{selection}
+\end{description}
 It goes without saying that the list above is not by no means complete and that all of the above are possible to implement in private cloud as well.
 \subsubsection{Mixtures of the two, aka hybrid cloud}
 For some implementations it would be ideal to combine the two, private and public cloud. Example of this type of deployment might be an application that has a Internet facing frontend running in service provider cloud, utilizing load balancers and firewalls offered as part of the cloud offering, while the database portion of the application is housed inside the customer datacenter, in customer hardware. Many vendors boast connectivity services that allow the "stretching" of in-house datacenter to service provider facilities. While flexible, this also creates complexity as it is more difficult to understand the dependencies of applications deployed in this manner. Also, it is worth noting that interconnecting data centers is quite complex topic on its own, especially if workloads are to be moved between locations. Some of the risks and implementation models are discussed in the later chapters.
