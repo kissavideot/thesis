@@ -210,7 +210,9 @@ Above has been all about IP applications, yet majority of classical applications
 \par
 Another class of connectivity worth mentioning is the interprocess communication(IPC) and remote direct memory access (RDMA) protocols seen in high performance computing. These applications are very sensitive to latency to begin with and this makes these protocols less likely candidates for stretched fabrics. It should be also noted that protocols such as Infiniband are suited to carry IP and storage traffic in addition to their more commonly seen HPC traffic patterns. Yet, similarly to fibre channel infiniband has limited scalability in terms of multitenancy via number of tenant specific partitions available in the infiniband fabric (Mellanox, 2014). These protocols, just like fibre channel, are non trivial to stretch over large distances in feasible and multitenant manner.
 \par
-As a conclusion for dependency to connectivity it could be stated that if ones application runs on IP and it supports decoupling of service IP from locally relevant IP it is likely a good candidate for cloud. Also, compus connectivity from end users to application should be built in fully redundant manner, or atleast the risks of non-redundant connectivity should be recognized and accepted at the highest level. Most non-IP services, such as fibre channel and infiniband based applications are difficult to run in a stretched, hybrid cloud and IP based alternatives should be considered.
+Regardless of the protocol being transported from end user to data center there is likely a need for encrypting the data while in transit. One approach is to implement the required encryption in the application itself by utilising TLS. It has been seen that to avoid complexity in applications there is a push to implement the encryption in the connectivity layer. While there are quite a few methods of implementing encryption in network it should be questioned if it is a sustainable choice to outsource application security to network layer. Implementing encryption using IPSEC (rfc4301) commonly indicates that OSI layer 3 routing should be implemented between data centers, while doing routing is healthy choice for data center interconnect in terms of limiting failure domains it also means that overlay networking is likely required if OSI layer 2 transparency is insisted upon. To implement both OSI layer 2 transparency and encryption one could choose to do encryption on OSI layer 2 via MACSEC (Juniper, 2018), VXLAN over IPSEC or by utilising encryption in DWDM (Arista, 2018) level. It should be noted that both MACSEC and IPSEC have impact in the capacity of performance in terms of payload transferred vs capacity utilized. Running VXLAN over IPSEC may have impact in the net payload as well, or atleast MTU should be carefully considered. Many public cloud providers such as Amazon (Amazon 2018), Google (Google 2018) and Microsoft (Microsoft 2018) support IPSEC tunnels to tenant specific virtual routing and forwarding instances that are logically separated from oneanother. Still, it is worth mentioning that even if the data center interconnect from customer data center to cloud provider is encrypted this does not mean that the intra data center traffic inside the service provider facility is encrypted in any fashion. This is one reason why it might be a good idea not to rely on network level to implement the encryption, instead utilize sufficient encryption the application level, just to be sure.
+\par
+As a conclusion for dependency to connectivity it could be stated that if ones application runs on IP, supports decoupling of service IP from locally relevant IP and it takes care of its own encryption it is likely a good candidate for cloud. Also, compus connectivity from end users to application should be built in fully redundant manner, or atleast the risks of non-redundant connectivity should be recognized and accepted at the highest level. Most non-IP services, such as fibre channel and infiniband based applications are difficult to run in a stretched, hybrid cloud and IP based alternatives should be considered.
 \subsubsection{Application security cannot be outsourced even in SaaS}
 \blindtext[2]
 \subsubsection{System security cannot be outsourced in IaaS}
@@ -351,5 +353,28 @@ Machines specialized to run Containers}
 	Thomas Mangin
 	ExaBGP - A new Tool to Interact with BGP
 	2010
+\bibitem{Understanding Media Access Control Security (MACsec)}
+	Juniper
+	2018
+\bibitem{Cloud Interconnect: DWDM Integrated Solution For Secure Long Haul Transmission}
+	Arista
+	2016
+\bibitem{rfc4301 - Security Architecture for the Internet Protocol}
+	IETF
+	rfc4301 - Security Architecture for the Internet Protocol
+	S. Kent
+	K. Seo
+\bibitem{AWS Managed VPN Connections}
+	Amazon
+	AWS Managed VPN Connections
+	Available in https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html on fourth of April 2018
+\bibitem{Cloud VPN Overview}
+	Google
+	Cloud VPN Overview
+	Available in https://cloud.google.com/vpn/docs/concepts/overview on fourth of April 2018
+\bibitem{Connect your datacenter to Azure}
+	Microsoft
+	Connect your datacenter to Azure
+	Available in https://azure.microsoft.com/en-us/services/vpn-gateway/ on fourth of April 2018
 \end{thebibliography}
 \end{document}
