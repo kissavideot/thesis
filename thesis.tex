@@ -165,10 +165,27 @@ It goes without saying that the list above is not by no means complete and that 
 \subsubsection{Mixtures of the two, aka hybrid cloud}
 For some implementations it would be ideal to combine the two, private and public cloud. Example of this type of deployment might be an application that has a Internet facing frontend running in service provider cloud, utilizing load balancers and firewalls offered as part of the cloud offering, while the database portion of the application is housed inside the customer datacenter, in customer hardware. Many vendors boast connectivity services that allow the "stretching" of in-house datacenter to service provider facilities. While flexible, this also creates complexity as it is more difficult to understand the dependencies of applications deployed in this manner. Also, it is worth noting that interconnecting data centers is quite complex topic on its own, especially if workloads are to be moved between locations. Some of the risks and implementation models are discussed in the later chapters.
 \section{Security in cloud}
-\blindtext[2]
+Security in cloud has several characteristics compared to traditional server infrastracture, especially in public and community cloud infrastructure. Private cloud mostly follows the traditional threat scenarios, nevertheless some aspects can be seen even here. In this chapter, we will cover several problems we have seen in cloud environments.
+\subsection{Security in private cloud}
+- Trusted environment
+- Self hosted, or hosted by a trusted partner
+The biggest difference between traditional server environments or even most of the virtual machine environments is the freedom often provided by the cloud environment. Thus users with less security awareness may be creating and maintaining instances, which may lead to poorer quality of servers in terms of security, a good example is servers meant for testing purposes. Also, if creating servers is more free across the personnel, this might lead to vague responsibilities and neglect of maintenance standards. An organisation has several means to mitigate these problems, for example by prividing custom images providing a certain level of security, by running security scans against the servers or by training to name a few examples.
+(Todo: Generic stuff about backups and their role in security. )For recovery purposes the cloud environments don't necessarily provide decent native backup solutions. This used to be the case for example with OpenStack's earlier version. This easily lead to situations, where backups were easily neglected. Thus if there is a data loss by technical failure or as a result of a system breach, bringing up the system could be quite troublesome.
+\subsection{Security in community cloud}
+- Partly trusted
+- Self hosted or hosted by a trusted or known partner
+\subsection{Security in public cloud}
+- Hosted by a known or unknown vendor
+- You can not normally audit the vendor -> blindness
+- Server location might change (take Apple's China incident) especially if vendor is an international actor
+- Contract
+- Mitigations
 \subsection{Introduction to security aspects in cloud}
 \blindtext[2]
 \subsection{Security aspects of application development in public cloud}
+- Make application too fast for attackers (cloud native)
+- The application can be provided from distributed location, same applies to data (which could be broken into meaningless pieces to fight data theft)
+- Possibilities?
 \blindtext[2]
 \subsection{Introduction to cloud security and application deployment}
 \blindtext[2]
@@ -177,6 +194,9 @@ For some implementations it would be ideal to combine the two, private and publi
 \subsubsection{Secure processes for updating application and library code}
 \blindtext[2]
 \subsubsection{Secure application administration procedures}
+- Best practices
+- Limitation created by cloud environment
+- Connections over internet
 \blindtext[2]
 \subsection{Security and availability, and what to prepare for}
 Players in the cloud service provider field tend to the well connected to Internet and to each other (FICIX,2018). This on its own gives service providers some edge when compared to inhouse data center and the connectivity options available. It is also fairly safe to assume that service providers also have more personnel available to run their infrastructure compared to small or medium size company whose business is non-IT-infrastructure.
