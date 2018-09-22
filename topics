@@ -21,6 +21,22 @@ Improving security with cloud native applications
 Cloud native applications are services, which are specifically build to recognize the surrounding provided by the cloud <todo: find a proper description>. The application can adjust to things like load and location. One idea of fighting attacks with cloud native solutions is provided by Nane Kratzke. With for example open source tehcnologies like Kubernetes or Docker Swarm an environment that would move fast in case an attack is noticed could be made. An example solution could be a container based application, on top of virtual machines that could be in geographically disperse clouds and from different cloud providers. In case there is an attack directed at the platform, the containers could be moved to another environment, for example to another service provider before an attacker can gain a foothold at the environment. According to the paper, there are no known approaches to use this technology for security based solutions (About being the Tortoise or the Hare? A Position Paper on Making Cloud Applications too Fast and Furious for Attackers. Nane Kratzke, 2018. https://arxiv.org/pdf/1802.03565.pdf. Read 18.4.2018 <todo: check the date>). Nevertheless, as availability is considered one aspects of security, this technique is well-known to provide this. To be used in the general context of security, there are some issues with this approach, as it is often hard to recognize underlying attacks. This we believe could be acquired at least to some extend with other traditional tehcnologies like SIEM, log analyzing and bug reports to name a few.
 
 
+Improving security with secure cloud design
 
+In addition to improving security on application level, it is possible to add to this goal with a hardened cloud platform. The big cloud providers like for example Amazon, Microsoft and Google do provide an extensive lists of measures to improve the security. Mostly these are provided by available security related products. To better understand what products these providers are seeing important, we'll introduce the tools more or less all of them are providing. <todo: find facts>
+(AWS: https://aws.amazon.com/products/security/, https://docs.microsoft.com/en-us/azure/security/, https://cloud.google.com/security/products/)
+
+Even though a customer can add a lot to improve the security, there is only limited data available on how the provider itself ensures security in operations. The providers might have an extensive list of compliances like (https://cloud.google.com/security/compliance/), but it is unlikely that even a mid-sized actor could make a proper audit. Also things like audit reports are not available, so there is no data from for example restrictions.
+
+
+
+
+Existing cloud security criterias and assessments
+
+https://cloudsecurityalliance.org/
+
+
+
+Importance of a good risk analysis when using cloud
 
 
