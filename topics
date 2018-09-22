@@ -11,3 +11,16 @@ Also other very visible risks appear. As long as you have a clearly defined phys
 
 In addition, risk analysis in a cloud based environment can be harder, when speaking of public clouds. Things like interviews can be a valuable tool when identifying risks (Stølen, Ketil, Atle Refsdal, and Bjørnar Solhaug. Cyber-Risk Management. Springer. © 2015. Books24x7. <http://common.books24x7.com.ezproxy.jamk.fi:2048/toc.aspx?bookid=115793> (accessed September 22, 2018) ), but interviewing any technical persons from a third party hosted cloud can be a real challenge. This can lead into a crippled risk identification process if not taken properly into account. It is obvious that this type of problem can realise even in non-cloud environemnts where the personnel isn't committed to the process.
 
+
+Benefits of cloud to protect data and services
+
+Although cloud environments can introduce several risks, they also provide an opportunity to improve the security. Several ideas are introduced in this section. Cloud has the advantage of being versatile, agile and distributed. These features can be used even in the well-known technologies.
+
+Improving security with cloud native applications
+
+Cloud native applications are services, which are specifically build to recognize the surrounding provided by the cloud <todo: find a proper description>. The application can adjust to things like load and location. One idea of fighting attacks with cloud native solutions is provided by Nane Kratzke. With for example open source tehcnologies like Kubernetes or Docker Swarm an environment that would move fast in case an attack is noticed could be made. An example solution could be a container based application, on top of virtual machines that could be in geographically disperse clouds and from different cloud providers. In case there is an attack directed at the platform, the containers could be moved to another environment, for example to another service provider before an attacker can gain a foothold at the environment. According to the paper, there are no known approaches to use this technology for security based solutions (About being the Tortoise or the Hare? A Position Paper on Making Cloud Applications too Fast and Furious for Attackers. Nane Kratzke, 2018. https://arxiv.org/pdf/1802.03565.pdf. Read 18.4.2018 <todo: check the date>). Nevertheless, as availability is considered one aspects of security, this technique is well-known to provide this. To be used in the general context of security, there are some issues with this approach, as it is often hard to recognize underlying attacks. This we believe could be acquired at least to some extend with other traditional tehcnologies like SIEM, log analyzing and bug reports to name a few.
+
+
+
+
+
