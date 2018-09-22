@@ -1,0 +1,8 @@
+Risk management is a crucial point in any information systems. 
+
+
+(Stølen, Ketil, Atle Refsdal, and Bjørnar Solhaug. Cyber-Risk Management. Springer. © 2015. Books24x7. <http://common.books24x7.com.ezproxy.jamk.fi:2048/toc.aspx?bookid=115793> (accessed September 22, 2018) )
+
+
+
+A cloud based environment presents several new risks, not forgetting the fact it also mitigates some others. Especially with public clouds the customer has only limited capabilities to affect business related decisions, which might pose a great risk. There are examples where actions like this have realized. For example, in February 24 2018 the news reported that Apple had made a decision to move the encryption keys of Chinese iCloud customers to a Chinese service provider. This was presumed to increase the risk of a governmental actor to get access to the keys (https://www.reuters.com/article/us-china-apple-icloud-insight/apple-moves-to-store-icloud-keys-in-china-raising-human-rights-fears-idUSKCN1G8060, accessed 22.9.2018). This article is a good reminder that there might be providers who would grant access to data under a pressure or legislative force for powerful actors like governments.
