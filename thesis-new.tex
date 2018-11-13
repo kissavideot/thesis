@@ -1,0 +1,177 @@
+
+\documentclass{article}
+\usepackage[nottoc,numbib]{tocbibind}
+%\usepackage[nottoc]{tocbibind}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage[
+	margin=1.5in,
+	footskip=1.2in
+	]{geometry}
+\usepackage{fancyhdr}
+\usepackage{mwe}
+\usepackage{graphbox}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{xcolor}
+\lstset {
+	breaklines=true
+}
+\usepackage{tocloft}
+%JAMK custom color, used to print The Line
+\definecolor{JamkBlue}{rgb}{0,90,125}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+
+%Title page needs special attention: line in the left
+\fancypagestyle{TitlePage}
+{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}	
+	\lhead{
+		\begin{tabular}[t]{l@{\hspace{3cm}}l}	
+		\includegraphics[scale=0.22]{jamk-logo}
+		\end{tabular}	
+		}
+	\newgeometry{left=4cm}	
+	\cfoot{\includegraphics[valign=B,scale=1.2]{jamk-footer} }	
+}
+
+%clear headers&footers
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+%insert jamk -footer logo to each page
+%\cfoot{\includegraphics[valign=B,scale=1.2]{jamk-footer} }
+\setmainfont{Carlito-Regular}
+\parskip = \baselineskip
+\usepackage[parfill]{parskip}
+ 
+\begin{document}
+\onehalfspacing
+\begin{titlepage}
+\thispagestyle{TitlePage}
+    \vfill
+    \begin{tabular}[t]{l@{\hspace{0cm}}l}
+     &
+     \begin{tabular}[t]{p{0.85\textwidth}}
+     \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+     \textbf{\Large {How to self-assess and audit application deployment in public cloud? }} \\ [2cm]
+	\large{Pinja Koskinen} \\	
+	\large{Vesa Simola} \\
+       { \date{ } }  
+	\\ \\ \\ \\ \\ \\ \\ \\ \\
+	\large{Masters thesis}\\
+	\large{XXXXX 2018}\\
+	\large{Cyber security}\\
+	\large{Master's degree programme in cyber security}
+	\end{tabular}
+    \end{tabular}
+
+\end{titlepage}
+
+\clearpage 
+\begin{table}[]
+\centering
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Author(s)\\ Pinja Koskinen, Simola, Vesa\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Type of publication\\ Masters thesis\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Date\\ Month Year\end{tabular}                  \\ \cline{3-3} 
+                                                                                        &                                                                                                & \begin{tabular}[c]{@{}l@{}}Language of publication:\\ English\end{tabular} \\ \cline{2-3} 
+                                                                                       & Number of pages                                                                                & Permission for web publication: x                                          \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Title of publication\\ Title\\ possible subtitle\end{tabular}}                                                                                                                                                       \\ \hline
+\multicolumn{3}{|l|}{Degree programme}                                                                                                                                                                                                                                \\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}Supervisor(s)\\ Last name, First name\end{tabular}}                                                                                                                                                                  \\ \hline
+\multicolumn{3}{|l|}{Assigned by}                                                                                                                                                                                                                                    \\ \hline
+\multicolumn{3}{|l|}{\multirow{5}{*}{Abstract}}                                                                                                                                                                                                                      \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\
+\multicolumn{3}{|l|}{}                                                                                                                                                                                                                                               \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\doublespacing
+\tableofcontents
+%Insert page number to right upper corner (header)
+\pagebreak 
+\setcounter{page}{1}
+\rhead{\thepage}
+\section{Introduction}
+\subsection{Background of the study}
+\subsection{Structure of the study}
+\subsection{Objective of the study}
+\subsection{Methods of the study}
+\section{General overview of cloud}
+Cloud service is generally understood as a product that consists of services hosted in the Internet. This could include servers, networks, storage systems, software application other services. These products could be running from anywhere in the world, in a distributed manner. Cloud allows users to utilize applications without modifications or access to their locally available files and services can be reachable from any location within the whole of Internet. Also, in some cases users may share files, data and information between several systems and other users via the cloud infrastructure.
+(Suikkanen, 2013 s8)
+\par
+Cloud community uses the following models to categorize their services: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). (Ahlgren 2012, s7)
+Cloud hosting can be done in few different manners: Private cloud, public cloud, hybrid cloud and community cloud. (Suikkanen, 2013).
+Aforementioned deployment and hosting models are discussed next.
+\subsection{Cloud hosting types}
+\subsubsection{Public cloud}
+Public cloud is hosted on the service provider facilities and all maintenance, modifications and upgrades are done by the service provider, meaning that customer has no control of the hosted infrastructure. One exception to this is the fact that certain service providers give customer the options of choosing from several geographical locations from which to run their service. (Juha Ahlgren 2012, s12).
+The economy of scale can mean that the public clous can offer efficient storage, compute and connectivity at reasonable prive. This can be especially true with the charging models where customers are required to pay only for the service they require and use. (Saara Suikka, 2013, s11)
+\subsubsection{Private cloud}
+Private cloud is understood as a service that is being operated by a service provider as a service to be used by single customer. Private cloud tends to use the same techniques as public cloud but they are configured to help the customer organization be more responsive and efficient in the IT resource usage than with traditional IT operation model. (Saara Suikkanen, 2013 s11)
+There are generally two types of private clouds, ones that are hosted on the customer premises and then there are those that are hosted on service provider infrastructure. It should be noted that while cloud infrastructure could be externaly hosted, it is still considered a private cloud if the infrastructure is solely used by single customer organization. (Juha Ahlgren 2012, s10).
+Infrastructure on public cloud on the otherhand is shared amongst the various customers of a service provider. (TAMOU, Aikaterini, 2014, s6).
+\subsubsection{Hybrid cloud}
+Combinations of the public and private cloud are called hybrid clouds. These clouds can tie the infrastructures of private and public cloud together and allow the customer to extend their capacity beyond what is available in the private cloud by additionally utilizing the public cloud on time of need. This is called cloud bursting. Meaning that customer uses private cloud under normal circumstances but during peak load some or all parts of the service can be transported to public cloud.(Juha Ahlgren 2012, s13)
+\subsubsection{Community cloud}
+Fourth and final form of cloud is the community cloud. Community cloud is a multitenant cloud setup that is utilized by several organizations that may share a common interest or computing concerns. Such concern could come in a form of a compliance requirement, audit requirement or that the organizations require high speed access to common data, for example research organizations working on a common project. (Saara Suikkanen 2013, s12)
+\subsection{Cloud deployment models}
+\subsubsection{Infrastructure as a service}
+Infrastructure as a service is the most basic service in the cloud landscape, it generally means an offering consisting of infrastructure, physical or virtual machines and other related resources like storage of images, networking and security features such as firewalls and load balancers and bundles of software. (Saara Suikkanen, 2013 s13)
+The benefit of the IaaS cloud for the customer is that certain data center related activities can be abstracted and used from for example a web interface or an API. There is no need to manage all levels of the infrastructure anymore and administative tasks can mostly focus on server side level like operating systems management and maintenance, and third party software maintenance. (Kavis, Michael. "Infrastructure as a Service". Architecting the Cloud: Design Decisions for Cloud Computing Service Models (SaaS, PaaS, and IaaS). John Wiley \& Sons. 2014. Books24x7. <http://common.books24x7.com.ezproxy.jamk.fi:2048/toc.aspx?bookid=62597> (accessed September 25, 2018), Infrastructure as a Service ).
+As in this type of a cloud service only the infrastructure is provided, all software related development and administration responsibilities are left to the customer (Kavis, Michael. "Infrastructure as a Service". Architecting the Cloud: Design Decisions for Cloud Computing Service Models (SaaS, PaaS, and IaaS). John Wiley \& Sons. © 2014. Books24x7. <http://common.books24x7.com.ezproxy.jamk.fi:2048/toc.aspx?bookid=62597> (accessed September 25, 2018), Infrastructure as a Service ).
+So, it is worth to emphazise that while customer has limited or no control of underlying architecture that is used to provision the cloud based services, customer is still responsible for proper use and care of the cloud resources, for example the configuration of a application. (STAMOU, Aikaterini, 2014,s5)
+\subsubsection{Platform as a service}
+As stated above IaaS does not address the many of the scalability issues or automation challenges faced by organizations especially from the perspective of a software. All the parts of the software infrastructure must be provided by the customer. To ease this task PaaS providers can provide software platforms to certain level. Typical software platforms can be for example databases, logging and payments services, which can be used via various APIs (Kavis, Michael. "Platform as a Service". Architecting the Cloud: Design Decisions for Cloud Computing Service Models (SaaS, PaaS, and IaaS). John Wiley \& Sons. © 2014. Books24x7. <http://common.books24x7.com.ezproxy.jamk.fi:2048/toc.aspx?bookid=62597> (accessed September 25, 2018) )
+Several PaaS related technologies also aim at automating the provisioning procedures for the virtual machines and containers that actually run the application. Examples of these services could be for example a Kubernetes platform, which would provide an API for containers for automatic scalability. Containers are relatively new concept in computing but they are used to package the application and its dependencies in to a manageable units for distribution and running in cloud platform. (What is a container? Docker documentation 2018). These containers can then be housed in orchestration tools such as the aforementioned Kubernetes or Docker swarm.
+So, PaaS deployment could be considered being one level above the Software as a Service deployment as it eliminated the need for customer-owned infrastructure for the deployment of a software application. (Saara Suikkanen 2013, s14)
+\subsubsection{Software as a service}
+Software as a service is a method of delivering software application from cloud via Internet connectivity with the least amount of manual work from customer. Using SaaS only requires configuration and user management from the customer, leaving everything else for the service provider. The advantages to the customer is the lack of need to maintain the platform and not needing any personnel to execute the maintenance tasks, which is beneficial especially when talking about services that do not belong to the core functionalities of the customer. (Kavis, Michael. "Software as a Service". Architecting the Cloud: Design Decisions for Cloud Computing Service Models (SaaS, PaaS, and IaaS). John Wiley \& Sons. © 2014. Books24x7. <http://common.books24x7.com.ezproxy.jamk.fi:2048/toc.aspx?bookid=62597> (accessed September 25, 2018) ) Naturally, the SaaS services can not be used for software that require any heavier tayloring than just predefined configuration changes.
+A real-life example that illustrates the stacking of cloud services and the SaaS could be a email service that has its customer specific frontends running in containers on service provider orchestration tool that utilizes virtual machines housed in service provider facilities and hypervisors somewhere. SaaS services are nowadays very common (Kavis, Michael. "Software as a Service". Architecting the Cloud: Design Decisions for Cloud Computing Service Models (SaaS, PaaS, and IaaS). John Wiley \& Sons. © 2014. Books24x7. <http://common.books24x7.com.ezproxy.jamk.fi:2048/toc.aspx?bookid=62597> (accessed September 25, 2018)).
+Key point to understand with the SaaS model is that customer has no control of the underlying software deployment or the computing infrastructure in SaaS model. (STAMOU, Aikaterini, 2014,s5). This is essential differentiator between SaaS and PaaS.
+\section{Security in cloud}
+\subsection{Common cloud security aspects}
+\subsection{Security aspects in public cloud}
+\subsection{Security aspects in private cloud}
+\subsection{Security aspects in hybrid cloud}
+\subsection{Security aspects in Infrastructure as a service}
+\subsection{Security aspects in Platform as a service}
+\subsection{Security aspects in Software as a service}
+\subsection{Methods of improving security and availability in cloud}
+\subsubsection{Service level agreenments}
+Service level agreenments aka SLAs are sets of condition and terms defined in contracts between customer and the service provider. SLAs can be used to define and agree upon the service levels between provider and customer, including sanctions if the terms are not met. Conditions and terms in SLAs can include various technical, commercial and business service level objectives (SLOs) combined with mechanics of how to measure that the agreed upon services levels are met. (Stamou,2014)
+\par
+To succesfully utilize SLA as a way to improve service availability and security the SLA life-cycle could be split into four parts as follows: (Stamou,2014)
+\begin{description}
+        \item[$\bullet$ Creation of the SLA including contract]
+        \item[$\bullet$ Implementing the SLA]
+        \item[$\bullet$ Enforcement and monitoring of the SLA]
+        \item[$\bullet$ Termination of the SLA]
+\end{description}
+Generally speaking the first step consists of service provider predefines set of various SLA levels for customer to choose from and to bound the contract upon. These could be considered as templates for the SLA. Customer then reviews these templates selects one, possibly modifying it and sending it back to service provider for a review. Service provider then accepts, declines or sends modified version to customer for a review. (Stamou,2014 s 13). Rest of the SLA life-cycle consists of implementation, regular reviews and eventually ending of the SLA as stated above.
+\par
+What makes the SLA for cloud specially tricky is the fact that currently SLAs for cloud lack standardization this is bad as standardization would lead into more structured content of SLAs. In a perfect world the SLA should take into account the individual risk requirements of the customer, this can lead into highly tailored SLAs. (Stamou,2014 s14).
+\subsubsection{Overcoming the reliance to connectivity}
+ince application is running the remote location it is obvious that connectivity is of paramount importance, in essense, having no connectivity in the campus means having no application and this can mean having no business. While many organizations have Internet connectivity these days it is still surprisingly uncommon for organizations to have backup connectivity if the unthinkable cut happens. Fiber cuts are not all that uncommon (Teddy Hayford-Acquah and Ben Asante, 2017).
+To reduce the impact of last mile failure it is common practice to have two physically separate lines from service provider, terminated to two separate customer premisses routers in two separate equipment rooms. (Gunnar Bøe, Vidar Faltinsen, Einar Lillebrygfjeld, 2011) Two routers using VRRP protocol act in active-passive manner to provide so-called first-hop redundancy (rfc5798, 2010). This approach, when combined with physically separate lines, provides protection from fiber cuts on the last mile and this also protects from power supply failures in the customer premisses router and also acts as a backup connection during router software upgrades and some configuration changes.
+However, this method does not protect against catastrophic failures in the service provider network. To accomplish this, it is required to have similarly separated lines and routers from two separate service providers. Assuming that the customer has some IP block(s) to announce over BGP and that the service providers are accepting the customer IP block(s) for transit it is possible to create fully redundant last mile connectivity. All these relatively complex and expensive requirements are likely the reason why organizations wont purchase redundant connectivity but instead accept the risk of significant business impact and downtime. (Packetworks, 2016).
+\par
+Similarly, if cloud application is running in a "stretched" network infrastructure, eg. data center interconnect, it is essential that the interconnect is built in redundant fashion. While redundancy is all good it can also cause failures of different kind, but with equally potential for catastrophy (Pepelnjak, 2011).
+This problem with location redundancy could be solved by making the application layer not so reliant on the underlying IP layer, this could be done for example by decoupling the service IP - address that end users connect to - and advertising it to data center routers via BGP over only locally significant subnet. Even while there are tools for this sort of decoupling (RIPE 2010), this kind of approaches have apparently been deemed as non-trivial and time consuming tasks so currently it would appear that the accepted solution is to introduce more complexity outside the application to hide the underlying already existing complexity of IP transport. One such method is overlay networking, such as VXLAN, that builds up a streched OSI layer 2 domain over routed network (rfc7348).
+While there are quite a few methods of implementing encryption in network it should be questioned if it is a sustainable choice to outsource application security to network layer. Implementing encryption using IPSEC (rfc4301) commonly indicates that OSI layer 3 routing should be implemented between data centers, while doing routing is healthy choice for data center interconnect in terms of limiting failure domains it also means that overlay networking is likely required if OSI layer 2 transparency is insisted upon. To implement both OSI layer 2 transparency and encryption one could choose to do encryption on OSI layer 2 via MACSEC (Juniper, 2018), VXLAN over IPSEC or by utilising encryption in DWDM (Arista, 2018) level. It should be noted that both MACSEC and IPSEC have impact in the capacity of performance in terms of payload transferred vs capacity utilized. Running VXLAN over IPSEC may have impact in the net payload as well, or atleast MTU should be carefully considered. Many public cloud providers such as Amazon (Amazon 2018), Google (Google 2018) and Microsoft (Microsoft 2018) support IPSEC tunnels to tenant specific virtual routing and forwarding instances that are logically separated from oneanother. Still, it is worth mentioning that even if the data center interconnect from customer data center to cloud provider is encrypted this does not mean that the intra data center traffic inside the service provider facility is encrypted in any fashion. This is one reason why it might be a good idea not to rely on network level to implement the encryption, instead utilize sufficient encryption the application level, just to be sure.
+\section{Self-assessment of cloud security posture}
+\section{Conclusions}
+\end{document}
