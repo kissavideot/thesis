@@ -179,7 +179,7 @@ Tim Mather, Subra Kumaraswamy and Shahed Latif describe the following barriers f
 \end{description}
 Given the suggested flexibility of the cloud deployments and the vast number of threats shown above it is only natural that from an IT manager's perspective the very nature of the cloud architechture bypasses and fights against the well-known tools and frameworks of security.
 This is illustrated by the ease (and contradiction therein) in which services can be migrated, created and deployed in a cloud environment, but this does not remove the need for compliance and security. (Raghu Yeluri, Enrique Castro-Leon 2014). 
-Next, we'll discuss some of the security concerns of different cloud deployment models.
+Next, we'll discuss some of the security concerns of different cloud deployment models starting from the more general ones towards more specific.
 \subsubsection{Division of responsibility}
 Based on the security concerns identified above it is essential to understand the concept of division of responsibility.
 Term division of responsibility means that the responsibility of the service and the data therein is shared between the customer and the cloud service provider as defined by Jiafu Wan,Kai Lin,Delu Zeng, Jin Li, Yang Xiang, Xiaofeng Liao, Jiwu Huang and Zheli Liu in their conference papaer on SPNCE 2016.
@@ -189,13 +189,18 @@ Combining the "many hands working together" -problem with the long list of ident
 Based on what has been written above it is likely that it is taken as a given that in public cloud there are multiple tenants on the same physical infrastructure.
 Be that as it may, most public clouds offer software-based separation and permission control to maintain isolation between customers. Hardware level separation might be an option, but with likely additional costs involved. It is essential to understand how the platform-of-choice implements the multitenancy, for example if it supports the concept of having multiple directory services, such as Microsoft Active Directory or LDAP, one for each tenant.(Bond, 2018).
 Responsibility of patching and updating servers in public cloud generally falls to the service provider, but this can also cause unexpected risks to customer systems and applications. Hence, close interaction with the service provider is required to ensure that no new risks are introduced  or availability issues surface due to service provider doing maintenance. (Halpert, 2011).
+It should be also noted that the highest level of access to the infrastructure is e.g the supervisor -level access, is held by the services provider. (Halpert, 2011)
 \subsection{Security aspects in private cloud}
 Unlike with public cloud, multitenancy is slightly less of an issue in private cloud, in fact private cloud on its own could be seen as an approach to solve the multitenancy issue. (Bond, 2018)
+Ben Halpert highlights that usually both consumer and service provider are internal to the organization, this allows more control over aspects of the cloud service, such as quality of service.
+Example of this is that internal can more easily impact the way workload is ran based on its criticality to the business. This control comes at the price of customer paying for the whole infrastructure as it is dedicated.(Halpert, 2011) 
 \subsection{Security aspects in hybrid cloud}
-As hybrid cloud is stated above being a mixture of both public and private cloud all the same rules apply. It should still be noted that while portions of the service may run in public cloud at times, the same security precautions and metrics should still be met as if the service was running solely in private cloud. (Voiks tallain sanoo ja viitata omaan aikaisempaan tekstiin?)
+As hybrid cloud is stated above being a mixture of both public and private cloud all the same rules apply. It should still be noted that while portions of the service may run in public cloud at times, the same security precautions and metrics should still be met as if the service was running solely in private cloud.
 \subsection{Security aspects in Infrastructure as a service}
+It is key element to understand that the service provider has means to view the activities of any virtual machine running inside a infrastructure as a service cloud. (Halpert, 2011)
 \subsection{Security aspects in Platform as a service}
 \subsection{Security aspects in Software as a service}
+Service provider has visibility to all of the information of all of the customers of their software as a service offering. (Halpert, 2011)
 \subsection{Methods of improving security and availability in cloud}
 \subsubsection{Service level agreenments}
 Service level agreenments aka SLAs are sets of condition and terms defined in contracts between customer and the service provider. SLAs can be used to define and agree upon the service levels between provider and customer, including sanctions if the terms are not met. Conditions and terms in SLAs can include various technical, commercial and business service level objectives (SLOs) combined with mechanics of how to measure that the agreed upon services levels are met. (Stamou,2014)
