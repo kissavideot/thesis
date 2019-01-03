@@ -153,7 +153,18 @@ Key point to understand the SaaS model is that customer has no control of the un
 \section{Security in cloud}
 \subsection{Common cloud security aspects}
 As cloud is a relatively new approach to computing it is no wonder there is some uncertainty about how security at its various levels can be achieved. This uncertainty has led to decission makers to state that security is their primary concern with cloud computing. (Tim Mather, Subra Kumaraswamy, Shahed Latif, 2009). 
-Some of the security concerns can be seen as shared among all the deployments while others are more tied to specific deployment model.
+Some general level challenges of cloud computing are identified as follows by Ben Halpert in his book Auditing Cloud Computing: A Security and Privacy Guide.
+\begin{description}
+	\item[$\bullet$ Availability] can be at risk as customers might consume more of the shared resources than expected. This is especially true in public cloud.
+	\item[$\bullet$ Vast resources] of the cloud could be used to launch denial of service attacks.
+	\item[$\bullet$ Data recidency] is a factor as different countries and regions have different requirements for information handling.
+	\item[$\bullet$ Multitenancy] is what allows the economics of scale, it is also a compliance consideration when same infrastructure is shared amongst customers.
+	\item[$\bullet$ Log management] of shared infrastructure might present an issue as information from multiple tenants could be visible in the same log files. 
+	\item[$\bullet$ Performance] and service levels of the cloud are based on the services purchased, these metrics can be controlled by service level agreenments.
+	\item[$\bullet$ Data evacuation] process should be addressed as it sets the boundaries how information is removed from shared infrastructure.
+	\item[$\bullet$ Supervisory access] is of interest as service provider has the highest level of access to the infrastructure.
+\end{description}
+Some of the more detailed security concerns can be seen as shared among all the deployments while others are more tied to specific deployment model.
 Tim Mather, Subra Kumaraswamy and Shahed Latif describe the following barriers for cloud implementations that are shared amongst the deployment models.
 \begin{description}
         \item[$\bullet$ Privacy] is essential and it may not be obvious if the cloud model meets the current and upcoming requirements to safeguard privacy.
@@ -177,6 +188,7 @@ Combining the "many hands working together" -problem with the long list of ident
 \subsection{Security aspects in public cloud}
 Based on what has been written above it is likely that it is taken as a given that in public cloud there are multiple tenants on the same physical infrastructure.
 Be that as it may, most public clouds offer software-based separation and permission control to maintain isolation between customers. Hardware level separation might be an option, but with likely additional costs involved. It is essential to understand how the platform-of-choice implements the multitenancy, for example if it supports the concept of having multiple directory services, such as Microsoft Active Directory or LDAP, one for each tenant.(Bond, 2018).
+Responsibility of patching and updating servers in public cloud generally falls to the service provider, but this can also cause unexpected risks to customer systems and applications. Hence, close interaction with the service provider is required to ensure that no new risks are introduced  or availability issues surface due to service provider doing maintenance. (Halpert, 2011).
 \subsection{Security aspects in private cloud}
 Unlike with public cloud, multitenancy is slightly less of an issue in private cloud, in fact private cloud on its own could be seen as an approach to solve the multitenancy issue. (Bond, 2018)
 \subsection{Security aspects in hybrid cloud}
@@ -214,6 +226,6 @@ The classical definition of compliance is to meet a requirement, yet in the cont
 Audit on the other hand is the process that measures how the organization is aligned with the given compliancy requirement at a given point in time. (Prashant Priyam, 2018)
 Another definition of the term auditing refers to the accounting of user activity on data. This can mean read and write operations, who did them and when.
 Cloud offers multitude of options to provide security, yet it largely depends on the requirements and talent available to implement those security features in practice. It is key to understand that the implementation of security in cloud is slightly different from what it is with on-premise or traditional deployments. (Prashant Priyam, 2018)
-Oxford dictionary definition of audit states that the audit is an official inspection of entitys accounts by an independent auditor. (Oxford dictionaries, 2018). We believe that the aforementioned statements highligh the difference of audit and self-assessment. 
+Oxford dictionary definition of audit states that the audit is an official inspection of entitys accounts by an independent auditor. (Oxford dictionaries, 2018). Another definition of audit is given by Ben Halpert in his book Auditing Cloud Computing: A Security and Privacy Guide as follows: Audit is an method of assuring that certain standard or practice is implemented and this is done by the auditor systematically examining the evidence for the compliance against given criteria. (Halpert 2011). We believe that the aforementioned statements highligh the difference of audit and self-assessment. 
 \section{Conclusions}
 \end{document}
