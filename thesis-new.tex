@@ -169,6 +169,11 @@ Tim Mather, Subra Kumaraswamy and Shahed Latif describe the following barriers f
 Given the suggested flexibility of the cloud deployments and the vast number of threats shown above it is only natural that from an IT manager's perspective the very nature of the cloud architechture bypasses and fights against the well-known tools and frameworks of security.
 This is illustrated by the ease (and contradiction therein) in which services can be migrated, created and deployed in a cloud environment, but this does not remove the need for compliance and security. (Raghu Yeluri, Enrique Castro-Leon 2014). 
 Next, we'll discuss some of the security concerns of different cloud deployment models.
+\subsubsection{Division of responsibility}
+Based on the security concerns identified above it is essential to understand the concept of division of responsibility.
+Term division of responsibility means that the responsibility of the service and the data therein is shared between the customer and the cloud service provider as defined by Jiafu Wan,Kai Lin,Delu Zeng, Jin Li, Yang Xiang, Xiaofeng Liao, Jiwu Huang and Zheli Liu in their conference papaer on SPNCE 2016.
+Same paper also clarifies this by stating that this division of work may lead to unexpected consequences and that it may be difficult to clearly define who can be held responsible of what as there are likely multiple factors at play on the same time.
+Combining the "many hands working together" -problem with the long list of identified security concerns this is a factor worth considering.
 \subsection{Security aspects in public cloud}
 Based on what has been written above it is likely that it is taken as a given that in public cloud there are multiple tenants on the same physical infrastructure.
 Be that as it may, most public clouds offer software-based separation and permission control to maintain isolation between customers. Hardware level separation might be an option, but with likely additional costs involved. It is essential to understand how the platform-of-choice implements the multitenancy, for example if it supports the concept of having multiple directory services, such as Microsoft Active Directory or LDAP, one for each tenant.(Bond, 2018).
