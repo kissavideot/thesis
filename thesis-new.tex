@@ -160,6 +160,13 @@ Software as a service is a method of delivering software application from cloud 
 A real-life example that illustrates the stacking of cloud services and the SaaS could be a email service that has its customer specific frontends running in containers on service provider orchestration tool that utilizes virtual machines housed in service provider facilities and hypervisors somewhere. SaaS services are nowadays very common (Kavis, Michael. "Software as a Service". Architecting the Cloud: Design Decisions for Cloud Computing Service Models (SaaS, PaaS, and IaaS). John Wiley \& Sons. © 2014. Books24x7. <http://common.books24x7.com.ezproxy.jamk.fi:2048/toc.aspx?bookid=62597> (accessed September 25, 2018)).
 Key point to understand the SaaS model is that customer has no control of the underlying software deployment or the computing infrastructure in SaaS model. (STAMOU, Aikaterini, 2014,s5). This is essential differentiator between SaaS and PaaS.
 \section{Security in cloud}
+As with any environment business continuity planning and disaster recovery planning apply, regardless if the service is ran on-premisses or in cloud. (Halpert, 2011).
+Hence, we'll start this chapter by describing business continuity plan and disaster recovery plan before diving further into the recognized risks.
+\subsection{Definition and importance of business continuity plan}
+Business continuity plan is clear plan that aims to ensure that critical functions of a given organization are capable to operate in case of a disaster.
+Business continuity plan should identity the essential resources such as personnel, systems and infrastructure that is required to run the essential emergency business operation and how to later on reestablish all the business functions. (Childs, 2008)
+\subsection{Definition and importance of disaster recovery plan}
+Disaster recovery plan is usually coupled with the business continuity plan, but it is aimed more towards how to deal with the immediate crisis to safeguard the personnel and also to limit further damage to equipment.(Childs, 2008)
 \subsection{Common cloud security aspects}
 As cloud is a relatively new approach to computing it is no wonder there is some uncertainty about how security at its various levels can be achieved. This uncertainty has led to decission makers to state that security is their primary concern with cloud computing. (Tim Mather, Subra Kumaraswamy, Shahed Latif, 2009). 
 Some general level challenges of cloud computing are identified as follows by Ben Halpert in his book Auditing Cloud Computing: A Security and Privacy Guide.
@@ -217,6 +224,7 @@ Based on the security concerns identified above it is essential to understand th
 Term division of responsibility means that the responsibility of the service and the data therein is shared between the customer and the cloud service provider as defined by Jiafu Wan,Kai Lin,Delu Zeng, Jin Li, Yang Xiang, Xiaofeng Liao, Jiwu Huang and Zheli Liu in their conference papaer on SPNCE 2016.
 Same paper also clarifies this by stating that this division of work may lead to unexpected consequences and that it may be difficult to clearly define who can be held responsible of what as there are likely multiple factors at play on the same time.
 Combining the "many hands working together" -problem with the long list of identified security concerns this is a factor worth considering.
+
 \subsection{Security aspects in public cloud}
 Based on what has been written above it is likely that it is taken as a given that in public cloud there are multiple tenants on the same physical infrastructure.
 Be that as it may, most public clouds offer software-based separation and permission control to maintain isolation between customers. Hardware level separation might be an option, but with likely additional costs involved. It is essential to understand how the platform-of-choice implements the multitenancy, for example if it supports the concept of having multiple directory services, such as Microsoft Active Directory or LDAP, one for each tenant.(Bond, 2018).
@@ -284,7 +292,7 @@ Cloud offers multitude of options to provide security, yet it largely depends on
 Oxford dictionary definition of audit states that the audit is an official inspection of entitys accounts by an independent auditor. (Oxford dictionaries, 2018). Another definition of audit is given by Ben Halpert in his book Auditing Cloud Computing: A Security and Privacy Guide as follows: Audit is an method of assuring that certain standard or practice is implemented and this is done by the auditor systematically examining the evidence for the compliance against given criteria. (Halpert 2011). We believe that the aforementioned statements highligh the difference of audit and self-assessment. 
 \subsection{Selecting targets for assessment}
 Tassa vois olla jotain riskienhallinnasta?
-\subsection{Controls to assess?}
+\subsection{Controls to assess}
 According to Chris Jacksons book Network Security Auditing (2010) There are three main categories of controls:
 \begin{description}
 	\item[$\bullet$ Administrative controls] are made up of policies, training and processes.
