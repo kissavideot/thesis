@@ -106,17 +106,16 @@
 \rhead{\thepage}
 \section{Introduction}
 \subsection{Background of the study}
-Tahan pitaa saada joku karkea kuvaus cloud computingista, vahan samaan tyyliin kuin mita on tuossa general overview of cloud -kappaleessa, mut viela generaalimpi?
-\par
 The cloud sign in network and software diagrams has been used for many years to indicate and abstract myriad of details concerning message flows, protocols and communications acreoss a network. This abstraction has since evolved to include computing, storage and applications, both virtual and physical. New flexible cloud capabilities are emerging regularly, better yet at lower costs using pay-per-use models. With these new developments comes the increased security, privacy and IT-governance challenges. (Kris Jamsa, 2012)
 \par
 Controversy of cloud computing is further illustrated by Tim Mather, Subra Kumaraswamy and Shahed Latif in their book Cloud security and privacy. They do it using the familiar "mind the gap" -sign seen (and heard) in the London subway. Principle is that while we constantly hear the choir of "cloud computing good" we also get to hear the "could security bad" verse. Mind the gap meaning that one has to watch his step. Yet it is apparently not clear what is wrong with the cloud security.(Tim Mather, Subra Kumaraswamy and Shahed Latif 2009). This thesis tries to find answers to what that might mean and what should be taken into an account when evaluating ones cloud posture.
 \subsection{Objective of the study}
 Ultimate goal of the study was to create self-assessment questionaire for cloud computing security.
 \subsection{Methods of the study}
-By answering to a question such as "what kind of information we're trying to come up with this research?" we can get a reasonable research method (Vilkka 2015).
-The goal of this thesis was to come up with a self-assessment criteria to evaluate ones cloud posture in terms of security.
-To this end the research was done by first doing qualitative research utilizing literature avaible to us and the topics other researchers had found noteworthy, followed by the practical part that was based on the findings from the first part.
+By answering to a question such as "what kind of information we're trying to come up with this research?" we can come up with a reasonable research method (Vilkka 2015).
+The answer to that question and hence the goal of this thesis was to come up with a self-assessment criteria to evaluate ones cloud posture in terms of security.
+To this end the research was done by first doing qualitative research utilizing literature avaible to us and the topics other researchers had found noteworthy, this was done to come up with reasonable background information to use as a basis for the self-assessment.
+Self-assessment being the practical part of the thesis.
 \par
 Practical part of the research was to actually implement the self-assessment questionaire that is handled as an separate attachement of this thesis.
 \section{General overview of cloud}
@@ -190,6 +189,29 @@ Tim Mather, Subra Kumaraswamy and Shahed Latif describe the following barriers f
 Given the suggested flexibility of the cloud deployments and the vast number of threats shown above it is only natural that from an IT manager's perspective the very nature of the cloud architechture bypasses and fights against the well-known tools and frameworks of security.
 This is illustrated by the ease (and contradiction therein) in which services can be migrated, created and deployed in a cloud environment, but this does not remove the need for compliance and security. (Raghu Yeluri, Enrique Castro-Leon 2014). 
 Next, we'll discuss some of the security concerns of different cloud deployment models starting from the more general ones towards more specific.
+\subsubsection{Requirements set by regulation}
+Combining the relative freshness of cloud as a concept and that there are many service providers to choose from it is unfortunate that there is not all that much rules and guidelines for cloud implementations.
+It is likely that in the future there will be more regulation for cloud services but it is hard to predict what the impact of the regulation will be. On the other hand, this new regulation might make it easier for customers to select service providers, but downside to this is that it could also lead to a situation where the cost benefits of cloud would shrink as customer would likely have to pay the bill of implementing the requirements defined by regulators. (Halpert, 2011)
+\par
+To better understand the rugalatory aspects in cloud computing we first need to define what is meant by regulation.
+The dictionary definition of regulation states that regulation is a rule or directive made and maintained by an authority (Oxford dictionary, 2018).
+To broaden the meaning we can look at Ben Halperts book Auditing Cloud Computing: A Security and Privacy Guide from 2011 where he gives the following, quite descriptive, definition: A regulation is a rule or law, hence there should be consequence for not abiding, and that there shall be policing in a form of compliance. Basic idea of regulation is broadly protective, for example to protect assets such as stakeholder value or citizens. (Halpert, 2011)
+\par
+Halpert goes on giving us few international examples of regulation:
+\begin{description}
+	\item[$\bullet$ Federal Information Security Management Act] is legislation that aims to improve all aspects of system security for federal agencies of the United States.
+	\item[$\bullet$ Sarbanes-Oxley Law] is legislation for publicly traded companies and their reporting systems with the idea of increasing transparency and accountability.
+	\item[$\bullet$ Privacy Laws] are various privacy specific laws on multiple levels, state, federal and EU.
+\end{description}
+In Finland we have this thing called Katakri that essentially is a auditing tool for authorities. Katakri can be used to evaluate the capability of organization when it comes to security of information that is classified as confidential. (Katakri, 2015)
+Another fine example of regulation that is effecting us in Finland is the EU General data protection regulation, or GDPR for short. GDPR officially states that stronger rules on data protection mean that people have more control over their personal data and that businesses benefit from a leveled playing field. (Official GPDR website, https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules\_en as viewed on Jan 2019)
+\par
+Now that we have established what regulation is we can think of reasons why rulation exists. Ben Halpert states that regulation could be identified as a counter reaction to the failures of security. As an example he showcases the sarbanes-oxley and Enron where authorities determined that Enron had failed at policing itself, in essence processes was defined but not implemented, resulting in damage to shareholders. After this incident Public company accounting oversight board (PCAOB) was formed to create a framework consisting of rules to follow for publicly traded companies.
+PCAOB went to create the rules based on at that point best known practices (COSO) that was already in place. Using these already defined best practices allowed PCAOB to quickly setup the audit criteria and guidelines. This resulted in Sarbanes-Oxley compliance program.
+(Halpert, 2011).
+\par
+This could be summarized so that the regulations appear when there is complexity and possibly high risk, and that regulation should be based on known frameworks and standards in order to provide guidance and compliance programs.
+To put regulation in to cloud context the reason for the need of regulation might surface in order to provide fair playing field and to address problems that could be related to harmonizing regulation across national borders.
 \subsubsection{Division of responsibility}
 Based on the security concerns identified above it is essential to understand the concept of division of responsibility.
 Term division of responsibility means that the responsibility of the service and the data therein is shared between the customer and the cloud service provider as defined by Jiafu Wan,Kai Lin,Delu Zeng, Jin Li, Yang Xiang, Xiaofeng Liao, Jiwu Huang and Zheli Liu in their conference papaer on SPNCE 2016.
