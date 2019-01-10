@@ -332,11 +332,26 @@ Audit on the other hand is the process that measures how the organization is ali
 Another definition of the term auditing refers to the accounting of user activity on data. This can mean read and write operations, who did them and when.
 Cloud offers multitude of options to provide security, yet it largely depends on the requirements and talent available to implement those security features in practice. It is key to understand that the implementation of security in cloud is slightly different from what it is with on-premise or traditional deployments. (Prashant Priyam, 2018)
 Oxford dictionary definition of audit states that the audit is an official inspection of entitys accounts by an independent auditor. (Oxford dictionaries, 2018). Another definition of audit is given by Ben Halpert in his book Auditing Cloud Computing: A Security and Privacy Guide as follows: Audit is an method of assuring that certain standard or practice is implemented and this is done by the auditor systematically examining the evidence for the compliance against given criteria. (Halpert 2011). We believe that the aforementioned statements highligh the difference of audit and self-assessment. 
-\subsection{Selecting targets for assessment}
+\subsection{Risk analysis: Selecting targets for assessment}
 In general, decisions related to compliance and security would ideally be backed by risks. To this end, it is important to have accurate understanding of the risks one is ascertaining, as this will make the organizations security policy more effective.
 In practice this means that one should identify the key assets, how to handle them and what risks they may pose before spending any money on security. This is is called risk analysis and it can be used to identify where the organization should put their focus on in terms of security. Risk analysis will likely not be perfect given the apparent fuzziness of measuring risk, yet it will provably be better than any guesswork, especially when adapted to each organization and repeated at regular intervals so that it matches the reasonably current situation. Valuable risk analysis could be defined as realistic, actionable and reproducible.(Raymond Pompon, 2016)
 \par
-Definition of risk could be illustrated as an event where the bad thing happens to something we care about. Risk is built of two components: impact and likelihood.(PALAA)
+According to Raymond Pompon, there are essentially two kinds of risk analysis: qualitative and quantitative. Qualitative method is based on specialists doing ratings on the factors against a scale. This scale could consist of "levels", such as low, medium and high, or colors etc.
+Raymond Pompon also points out that due to the somewhat subjective nature of qualitative method it may need some clarifying for the ratings used. One could utilize a table with meanings, such as the following for likelihood:
+\begin{description}
+	\item[$\bullet$ Frequent] Assumed to take place more than 10 times per year
+	\item[$\bullet$ Occasional]Assumed to take place between 1 and 10 times per year
+	\item[$\bullet$ Remote] Assumed to take place between 1 time per year and once every 5 years
+	\item[$\bullet$ Very Unlikely] Assumed to take place less than once every 5 years
+\end{description}
+Raymond Pompon also proposes theree impact ratings: minor, major and critical. All three of those can also be split into three subcategories: confidentiality impact, integrity impact and availability impact.
+Example of confidentiality of minor scale could be under 10 database records of confidential nature being exposed internally without any proof of exploitation, while major impact of the same thing would entail that several internal employees with no authorisation having accessed these records. Critical rating would be under 10 data records being exposed externaly or more than 10 records exposed internally. Integrity impact follows the same guidelines but it essentially replaces the exposure of data with data being altered without authorisation and wether the alteration can be detected and corrected. Availability impact is slightly different concept, minor being several users having no access for 1-5 days, or customer facing service down up to an hour. Major availability impact could be characterized as customer facing service being down for more than an hour but less than a day, critical represents a situation where customer facing service is down for more than a business day. (Raymond Pompon,2016) 
+\par
+Quantitative risk analysis utilizes real statistics and data instead of subjective specialist opinions. These statistics can be collected from asset analysis and monitoring systems.
+Similarly, as with qualitative analysis organization shall match its assets against attack surface, known weaknesses and implemented controls. For example, if company hosts 10 websites (assets) it might know that on average it is missing 2 security patches on each (weakness) and the control against this weakness could be a firewall (control). Another example that follows the same lines would be: 350 (attack surface) users (asset) are subject to social engineering (weakness) but only 4\% failed the last phishing test training (control).
+While the above gives us numbers it is likely that in the end something like security steering committee will make subjective calls, but at least they will have best possible data to base their decisions on.
+\par
+With risk and asset information at hand it is easier to select the aspects to self-assess. 
 \subsection{Controls to assess}
 According to Chris Jacksons book Network Security Auditing (2010) There are three main categories of controls:
 \begin{description}
