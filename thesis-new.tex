@@ -171,11 +171,14 @@ Key point to understand the SaaS model is that customer has no control of the un
 \section{Security in cloud}
 As with any environment business continuity planning and disaster recovery planning apply, regardless if the service is ran on-premisses or in cloud. (Halpert, 2011).
 Hence, we'll start this chapter by describing business continuity plan and disaster recovery plan before diving further into the recognized risks.
-\subsection{Definition and importance of business continuity plan}
+\subsection{Definition and importance of business continuity  and disaster recovery plan}
 Business continuity plan is clear plan that aims to ensure that critical functions of a given organization are capable to operate in case of a disaster.
 Business continuity plan should identity the essential resources such as personnel, systems and infrastructure that is required to run the essential emergency business operation and how to later on reestablish all the business functions. (Childs, 2008)
-\subsection{Definition and importance of disaster recovery plan}
 Disaster recovery plan is usually coupled with the business continuity plan, but it is aimed more towards how to deal with the immediate crisis to safeguard the personnel and also to limit further damage to equipment.(Childs, 2008)
+\subsubsection{RTO - recovery time objective}
+RTO roughly translates to how quickly customer needs to recover in case of disaster taking place. RTO has direct impact on the budjet and resourcing required to recovery operations. As an example, if customer is to assume RTO of 3 hours, it is essential to invest hefty amount of money on a recovery site and make sure that it is operational with in the three hour window. If inturn, customer is expecting three week RTO service provider could, in some cases, just simply wait for the repairs in data center to take place. (Vora,2017)
+\subsubsection{RPO - recovery point objective}
+When RTO is mostly about the time we have available before operations must continue, RPO is translated into to the amount of data that is acceptable to loose in case of disaster. RPO can give indications as to how robust infrastructure is required to run the service. Example of this would be RPO of five hours, meaning that backups of the service must be taken every five hours. This is to keep the amount of "inflight" data at bay. (Vora,2017)
 \subsection{Common cloud security aspects}
 As cloud is a relatively new approach to computing it is no wonder there is some uncertainty about how security at its various levels can be achieved. This uncertainty has led to decission makers to state that security is their primary concern with cloud computing. (Tim Mather, Subra Kumaraswamy, Shahed Latif, 2009). 
 Some general level challenges of cloud computing are identified as follows by Ben Halpert in his book Auditing Cloud Computing: A Security and Privacy Guide.
