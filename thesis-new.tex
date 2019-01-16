@@ -397,7 +397,20 @@ Even higher in the stack after IDS/IPS and the TCP headers is the web applicatio
 \par
 NTP??
 \subsubsection{Virtual machine image management}
-\subsubsection{Vulnerability and management}
+To discuss the security aspects of virtual machine disk images, lets first establish what is meant by virtual machine disk image.
+Base images of virtual machines ran inside a cloud environment come in two basic form factors: disk images and container images. Disk image represents the underlying hard disk of the virtual machine and there are quite a few different formats to this.
+\begin{description}
+	\item[$\bullet$ raw] is an unstructured image format
+	\item[$\bullet$ qcow2] is the format-of-choice of the QEMU system, this supports dynamic expansion and copy-on-write
+	\item[$\bullet$ vhd] is a format accepted by various proprietary systems and KVM amongst others
+	\item[$\bullet$ ARI] is the amazon kernel image
+\end{description}
+There are others as well, such as vmdk and vdi. Container format on the otherhand contains also required metadata about the virtual machine itself in addition to the disk image, it is not just the backing harddrive.(Raghu Yeluri, Enrique Castro-Leon, 2014)
+\par
+These images may be provided to the customer by the cloud service provider as preconfigured virtual machine images, or the customer may provide their own, or even download the images from somewhere in the Internet. Customer should not assume that the preconfigured container images or virtual machines are secure or compliant with the customer requirements, regardless if they are provided by ther cloud service provider or especially if downloaded from the Internet. In addition to this, it is left to the customer to deal with the patch management of these images as the service provider only takes care of the underlying infrastructure. This has to be seen as a continous effort, not just as something that takes place only during the initial rollout.(Vacca, 2016)
+\subsubsection{Vulnerability and patch management}
+As stated above the responsibility of the security posture of virtual machines provisioned in Infrastructure as a service cloud deployment is on the customer. (Vacca, 2016) Be that as it may, customer should still make sure that the service provider has a policy to upgrade and patch their own systems in timely and safe manner in order to limit exposure. (Winkler, 2011)
+It is regarded as a best practice to regularly run vulnerability scanning. Generally speaking, there are two different types of scans, ones that are initiated outside of a machine, over the network. These scans can target any device reachable, and they do not assume access to the target system. Second, more through scan requires access to the target system in order to create complete inventory of what the target system has in store, these authenticated scans may take significant amount of time. Ideally, these scans should include everything from cloud management platforms, servers and possible network devices. Idea of the scan is to identify new or left-over vulnerabilities so that the relevant risk might be mitigated. These scans can also be utilized to cross check the found devices against the catalog of known devices, if unknown devices are found then more thural investigation is required. Scans can also help to identify missing patches if the service is reachable over the network.
 \subsubsection{Log management}
 \section{Self-assessment of cloud security posture}
 Before going further, lets briefly address the concept of criteria-based self-assessment and how one might approach the whole concept of self-assessment. 
