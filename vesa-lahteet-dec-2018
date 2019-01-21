@@ -1,171 +1,254 @@
 Cloud Computing: Principles and Paradigms
-Rajkumar Buyya, James Broberg, Andrzej Goscinski
-John Wiley & Sons, 2011
-
+	John Wiley & Sons
+	Rajkumar Buyya
+	James Broberg
+	Andrzej Goscinski
+	2011
+	
 Service Repository for Cloud Service Consumer Life Cycle Management 
-Hong Thai Tran, George Feuerlicht
-Faculty of Engineering and Information Technology
-University of Technology, Sydney, 2015
-
+	University of Technology, Sydney
+	Faculty of Engineering and Information Technology
+	Hong Thai Tran
+	George Feuerlicht
+	2015
+	
 LOCKING DOWN LOG FILES:  ENHANCING NETWORK SECURITY BY PROTECTING LOG FILES 
-Bernie Lantz,Rob Hall, Jason Couraud
-Utah State University 2006
-
+	Utah State University 
+	Bernie Lantz
+	Rob Hall
+	Jason Couraud
+	2006
+	
 Elementary Information Security, 2nd Edition
-Smith, 2015
-Jones & Bartlett Learning
-
+	Jones & Bartlett Learning
+	Smith
+	2015
+	
+	
 Practical and Robust Secure Logging from Fault-Tolerant Sequential Aggregate Signatures
-Gunnar Hartung,Björn Kaidel,Alexander Koch,Jessica Koch,Dominik Hartmann, 2017
-Springer
-
+	Springer
+	Gunnar Hartung
+	Björn Kaidel
+	Alexander Koch
+	Jessica Koch
+	Dominik Hartmann
+	2017
+	
 Applied Information Security: A Hands-on Approach
-David Basin, Patrick Schaller, Michael Schläpfer, 2011
-Springer-Verlag Berlin Heidelberg 
-
+	Springer-Verlag Berlin Heidelberg 
+	David Basin
+	Patrick Schaller
+	Michael Schläpfer
+	2011
+	
 The Tao of Network Security Monitoring Beyond Intrusion Detection
-Richard Bejtlich, 2004
-Addison-Wesley Professional
-
+	Addison-Wesley Professional
+	Richard Bejtlich
+	2004
+	
 Applied Network Security Monitoring
-Chris Sanders, Jason Smith, 2013
-Syngress
-
-
+	Syngress
+	Chris Sanders, Jason Smith
+	2013
+	
 WAVNet: Wide-Area Network Virtualization Technique for Virtual Private Cloud
-Zheming Xu,Sheng Di,Weida Zhang,Luwei Cheng,Cho-Li Wang, 2011
-IEEE
-
-
+	IEEE
+	Zheming Xu
+	Sheng Di
+	Weida Zhang
+	Luwei Cheng
+	Cho-Li Wang
+	2011
+	
 Guide to Computer Network Security
-Joseph Migga Kizza, 2012
-Springer
-
-
+	Springer
+	Joseph Migga Kizza
+	2012
+	
+	
 Securing the Cloud
-Vic Winkler, 2011
-Syngress
-
+	Syngress
+	Vic Winkler
+	2011
+	
 Cloud Computing Security
-John R. Vacca, 2016
-CRC Press
-
+	CRC Press
+	John R. Vacca
+	2016
+	
 Accountability and security in the cloud : First Summer School, Cloud Accountability Project, A4Cloud, Malaga, Spain, June 2-6, 2014, Revised Selected Papers and Lectures
-Models for Cloud Risk Assessment: A Tutorial
-Erdal Cayirci, 2015
-
-
+	Models for Cloud Risk Assessment: A Tutorial
+	Erdal Cayirci
+	2015
+	
+	
 Accountability and security in the cloud : First Summer School, Cloud Accountability Project, A4Cloud, Malaga, Spain, June 2-6, 2014, Revised Selected Papers and Lectures
-Valentina Casola, Alessandra De Benedictis, Massimiliano Rak, 2015
-A4Cloud Summer School on Accountability and Security in the Cloud
-
+	A4Cloud Summer School on Accountability and Security in the Cloud
+	Valentina Casola
+	Alessandra De Benedictis
+	Massimiliano Rak
+	2015
+	
 The Cloud Security Ecosystem
-Ryan Ko, Raymond Choo, 2015
-Syngress
-
+	Syngress
+	Ryan Ko, Raymond Choo
+	2015
+	
 Enterprise Cloud Security and Governance
-Zeal Vora, 2017
-Packt Publishing
-
+	Packt Publishing
+	Zeal Vora
+	2017
+	
 Data Deduplication for Data Optimization for Storage and Network Systems
-Daehee KimSejun SongBaek-Young Choi, 2017
-Springer
-
-
+	Springer
+	Daehee KimSejun
+	SongBaek-Young Choi
+	2017
+	
+	
 Rethinking Enterprise Storage: A Hybrid Cloud Model
-Marc Farley, 2013
-Microsoft Press
-
+	Microsoft Press
+	Marc Farley
+	2013
+	
 Security for Cloud Storage systems
-Kan Yang,Xiaohua Jia, 2013
-Springer
-
+	Springer
+	Kan Yang
+	Xiaohua Jia
+	2013
+	
 Disappearing Cryptography, 3rd Edition
-Peter Wayner, 2009
-Morgan Kaufmann
-
-
-
+	Morgan Kaufmann
+	Peter Wayner
+	2009
+	
+	
+	
 IT Security Risk Control Management: An Audit Preparation Plan
-Raymond Pompon, 2016
-Apress
-
-
+	Apress
+	Raymond Pompon
+	2016
+	
+	
 The experiences with and opinions on self-assessment among students and their teachers
-Tiia Kokkonen, 2012
-University of Jyväskylä
-
+	University of Jyväskylä
+	Tiia Kokkonen
+	2012
+	
 Promoting Learning and Achievement Through Self-Assessment
-Heidi Andrade, Anna Valtcheva, 2009
-http://www.tandfonline.com/loi/htip20
-
-
+	http://www.tandfonline.com/loi/htip20
+	Heidi Andrade
+	Anna Valtcheva
+	2009
+	
+	
 Key management deployment guide : using the IBM Enterprise key management foundation
-Mike Andreasen, Troels Norgaard, Alina Mot, Per Snowman, Axel Buecker, Carsten Dahl Frehr, Soren Peen, W. Cr
-aig Johnston, 2014
-Poughkeepsie NY IBM Corp. International Technical Support Organization
-
-
-
+	Poughkeepsie NY IBM Corp. International Technical Support Organization
+	Mike Andreasen
+	Troels Norgaard
+	Alina Mot
+	Per Snowman
+	Axel Buecker
+	Carsten Dahl Frehr
+	Soren Peen
+	W. Craig Johnston
+	2014
+	
+	
+	
 A Formal Security Analysis of the Signal Messaging Protocol
-Katriel Cohn-Gordon, Cas Cremers, Benjamin Dowling, Luke Garratt, Douglas Stebila, 2017
-University of Oxford, UK
-Royal Holloway, University of London, UK
-McMaster University, Canada
-
+	University of Oxford, UK
+	McMaster University, Canada
+	Royal Holloway, University of London, UK
+	Katriel Cohn-Gordon
+	Cas Cremers
+	Benjamin Dowling
+	Luke Garratt
+	Douglas Stebila
+	2017
+	
 Building the infrastructure for cloud security: a solutions view
-Raghu Yeluri, Enrique Castro-Leon, 2014
-Apress
-
+	Apress
+	Raghu Yeluri
+	Enrique Castro-Leon
+	2014
+	
 Cloud Computing and Security
-Xingming Sun,Zhaoqing Pan and Elisa Bertino, 2018
-
+	Xingming Sun
+	Zhaoqing Pan
+	Elisa Bertino
+	2018
+	
 Pro data backup and recovery
-Steven Nelson,2011
-Apress
-
-
+	Apress
+	Steven Nelson
+	2011
+	
 oxford dictionaries, 2018 
-Cloud security: A comprehensive guide to secure cloud computing Ronald L. Krutz, Russell Dean Vines, 2010, John Wiley & Sons
-Cloud security, James Bond, 2018, O'reilly media, inc
-
+	
+Cloud security: A comprehensive guide to secure cloud computing
+	John Wiley & Sons
+	Ronald L. Krutz
+	Russell Dean Vines
+	2010
+	
+Cloud security
+	O'reilly media, inc
+	James Bond
+	2018
+	
 Cloud Computing, Security, Privacy in New Computing Environments,2016
-Jiafu Wan,Kai Lin,Delu Zeng, Jin Li, Yang Xiang, Xiaofeng Liao, Jiwu Huang, Zheli Liu
-Conference, SPNCE 2016, Guangzhou, China
-
-
-Auditing Cloud Computing: A Security and Privacy Guide, 2011
-Ben Halpert
-John Wiley & Sons
-
-
-Understanding PaaS, 2012
-Michael P. McGrath
-O'Reilly Media, Inc.
-
-
+	Conference, SPNCE 2016, Guangzhou, China
+	Jiafu Wan
+	Kai Lin
+	Delu Zeng
+	Jin Li
+	Yang Xiang
+	Xiaofeng Liao
+	Jiwu Huang
+	Zheli Liu
+	2016
+	
+Auditing Cloud Computing: A Security and Privacy Guide
+	John Wiley & Sons
+	Ben Halpert
+	2011
+	
+Understanding PaaS
+	O'Reilly Media, Inc.
+	Michael P. McGrath
+	2012
+	
 Cloud Computing
-Kris Jamsa, 2012
-Jones & Bartlett Learning
-
+	Jones & Bartlett Learning
+	Kris Jamsa
+	2012
+	
 Cloud Security and Privacy
-Tim Mather, Subra Kumaraswamy, Shahed Latif 2009
-O'Reilly Media, Inc.
-
+	O'Reilly Media, Inc.
+	Tim Mather
+	Subra Kumaraswamy
+	Shahed Latif
+	2009
+	
 Network Security Auditing
-Chris Jackson, 2010
-Cisco Press
-
+	Cisco Press
+	Chris Jackson
+	2010
+	
 IT Security Risk Management in the Context of Cloud Computing
-André Loske, 2015
-Springer Fachmedien Wiesbaden 
-
+	Springer Fachmedien Wiesbaden 
+	André Loske
+	2015
+	
 Prepare for the Worst, Plan for the Best: Disaster Preparedness and Recovery for Small Businesses
-Donna R. Childs, 2008
-John Wiley & Sons
-
+	John Wiley & Sons
+	Donna R. Childs
+	2008
+	
 Cloud Security and Governance: Who's on your cloud?
-Sumner Blount, Rob Zanella, 2010
-IT Governance Publishing
-
-
+	IT Governance Publishing
+	Sumner Blount, Rob Zanella
+	2010
+	
+	
