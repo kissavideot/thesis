@@ -330,7 +330,15 @@ Be that as it may, ideally it would be appropriate to consider security similarl
 \par
 Contradicting the whole cloud computing paradigm of on-demand and self service, currently many of the standard contracts available from cloud service providers are rather one-sided with little room for requirements from the customer, meaning that service providers are trying to avoid any meaningful commitments or assuming any responsibility, this lends itself to standard contracts being very service provider -friendly. This is highlighted by permitting unilateral termination or suspension of the service and they also tend to avoid most of the liability of the service provider.(Valentina Casola, Alessandra De Benedictis, Massimiliano Rak, 2015)
 \subsubsection{Supply chain security}
-\subsubsection{Human factor in security}
+\subsubsection{Human factor in security and the cycle of deception}
+There is a complete class of vulnerabilities related to the human factor in the security landscape, goal of these attacks being to induce the victim to relay information or execute activities they are not supposed to either release or perform.
+It is stated that the so called social engineering has significant propability of success. This is highlighted by the protection mechanisms against it being complex and success of these defence mechanisms is also difficult to measure.
+Practical exercises are suggested to train managers and users in addition to the theorethical training, this can include social engineering penetration testing and measuring of success of such tests.
+Concept of cycle of deception is introduced to explain the different parts of a social engineering attack. First is the attack cycle. This includes the behaviour of the intruder and activities taken by the attacker. Just like any other type of attack, social engineering attack has purpose, goal and some form of plan how to reach it. These techniques can involve anything from dumpster diving to befriending the victim or someone else with usable knowledge on the victim and then utilizing manipulative methods to make this person hand out information that can be used to attackers gain, in other words goal is to scam the victim to trust the attacker. 
+Second cycle in the cycle of deception is the defence cycle, descriping the methods available to the defender. Examples of these could be to have a solid public defence policy or strong reputation of reporting illegal activities to authorities, educating employees, clear guidance how to act if one detects social engineering attempts. On the other words, predefined means how to detect an attack and how to respond. The goal of these predefined procedures should be to make it easy to report a social engineering attack without any social or professional stigma. This allows the defender to take actions on during an ongoing attack.
+Third and last cycle in the cycle of deception is the victim cycle. Victim cycle is concerned with the actions taken by the target of the attack. It is stated that often too much of the investigative focus is put on the attacker while it might be more efficient to put more focus on the victim in order to understand how the victim possible set him/herself up for the deception to begin with. This kind of information could be useful to prevent future attacks. One should also note that the victim maybe evolve from the role of victim to someone whi is hardher to victimize in the future, while it is also possible that the victim unfortunately regresses to a person who accepts his/her role as a victim who is even easier to exploit in the future. (Nohlberg,2008)
+\par
+Key takeaway of all this is that training in security related matters is essential part of the ogranizational means to maintain acceptable security posture and to avoid accidental loss of data. This training combined with the commitment and attitude from management can create information security culture that develops into security awareness and perception amongst the employees, influencing their view of matters of information security.(Ndungu,Kandel, 2015) 
 \subsubsection{Encrypt static data and in-flight data whenever possible}
 As stated earlier the very nature of cloud computing relies in the resource pooling, this on its own poses the question if cloud storage service is suitable as several customers utilize the same storage system. To lessen the risk of data leakage within the cloud customer should implement encryption to protect static data. For infrastructure as a service environment that could mean using encryption methods provided by service provider or encrypting the data using third party system. When using encryption it is essential to use appropriate encryption algorithms, at the time of writing this includes AES, customer should select the encryption algorithm based on actual need and so that it is compliant with regulations. Encryption highlights the importance of managing the encryption keys in a efficient manner and customer should implement a standardized method of user key management and distribution method so that they can utilize the encryption and manage data in a secure fashion. (Xingming Sun,Zhaoqing Pan and Elisa Bertino, 2018)
 I in their paper on "A Formal Security Analysis of the Signal Messaging Protocol" from 2017 Katriel Cohn-Gordon, Cas Cremers, Benjamin Dowling, Luke Garratt and Douglas Stebila illustrate the use case for end-to-end encryption of communications.
@@ -796,7 +804,18 @@ Interleaved nature of the various controls described above provides a way to inv
         2010.
 	\textit{Cloud Security and Governance: Who's on your cloud?}
         IT Governance Publishing.
-
+\bibitem{Securing Information Assets: Understanding, Measuring and Protecting against Social Engineering Attacks}
+	Nohlberg, M.
+	2008.
+	\textit{Securing Information Assets: Understanding, Measuring and Protecting against Social Engineering Attacks}
+	Stockholm University
+	University of skövde
+\bibitem{INFORMATION SECURITY MANAGEMENT IN ORGANIZATIONS}
+	Ndungu, M,.
+	Kandel, S.
+	2015.
+	INFORMATION SECURITY MANAGEMENT IN ORGANIZATIONS
+	CENTRIA UNIVERSITY OF APPLIED SCIENCES
 \end{thebibliography}
 
 \end{document}
