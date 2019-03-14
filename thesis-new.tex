@@ -495,41 +495,43 @@ As stated, self-assessment means observation and evaluation of oneself or activi
 \par
 Prior to going deeper into self-assessment of cloud security posture we need to define what is meant by compliance and audit, and how they differ from self-assessment.
 The classical definition of compliance is to meet a requirement, yet in the context of security compliance is a security blueprint for certain type of data. Organization that owns the data defines the minimum level of security.
-Audit on the other hand is the process that measures how the organization is aligned with the given compliance requirement at a given point in time. (Prashant Priyam, 2018)
+Audit on the other hand is the process that measures how the organization is aligned with the given compliance requirement at a given point in time. (Priyam, 2018)
 Another definition of the term auditing refers to the accounting of user activity on data. This can mean read and write operations, who did them and when.
-Cloud offers multitude of options to provide security, yet it largely depends on the requirements and talent available to implement those security features in practice. It is key to understand that the implementation of security in cloud is slightly different from what it is with on-premise or traditional deployments. (Prashant Priyam, 2018)
-Oxford dictionary definition of audit states that the audit is an official inspection of entitys accounts by an independent auditor. (Oxford dictionaries, 2018). Another definition of audit is given by Ben Halpert in his book Auditing Cloud Computing: A Security and Privacy Guide as follows: Audit is an method of assuring that certain standard or practice is implemented and this is done by the auditor systematically examining the evidence for the compliance against given criteria. (Halpert 2011). We believe that the aforementioned statements highlight the difference of audit and self-assessment. 
+Cloud offers multitude of options to provide security, yet it largely depends on the requirements and talent available to implement those security features in practice. It is a key point to understand that the implementation of security in cloud is slightly different from what it is with on-premise or traditional deployments. (Priyam, 2018)
+Oxford dictionary definition of audit states that the audit is an official inspection of entity's accounts by an independent auditor (Oxford dictionaries, 2018). Another definition of audit is given by Ben Halpert in his book Auditing Cloud Computing: A Security and Privacy Guide as follows: Audit is a method of assuring that certain standard or practice is implemented and this is done by the auditor systematically examining the evidence for the compliance against given criteria. (Halpert, 2011). We believe that the aforementioned statements highlight the difference of audit and self-assessment. 
 \subsection{Risk analysis: Selecting targets for assessment}
-In general, decisions related to compliance and security would ideally be backed by risks. To this end, it is important to have accurate understanding of the risks one is ascertaining, as this will make the organizations security policy more effective.
-For this to happen it is essential to understand the concept of risk. Risk could be defined as a possibility of suffering harm for particular asset, asset being anything of value. Value of asset could be interpret as time and resources required to rebuild or restore the asset to its former state. Vulnerability on the other hand is a known weakness in that particular asset that could lead to the exploitation of the asset in question. All of this can be put into a form of a equation: risk = threat x vulnerability + asset value.(Bejtlich, 2004)
-In practice this means that one should identify the key assets, how to handle them and what risks they may pose before spending any money on security. This is is called risk analysis and it can be used to identify where the organization should put their focus on in terms of security. Risk analysis will likely not be perfect given the apparent fuzziness of measuring risk, yet it will provably be better than any guesswork, especially when adapted to each organization and repeated at regular intervals so that it matches the reasonably current situation. Valuable risk analysis could be defined as realistic, actionable and reproducible.(Raymond Pompon, 2016)
-Unfortunately, cloud also present extra challenge when doing risk assessments compared to traditional IT. This represents itself in a form of cloud service providers generally keeping the locations, architectures and other security details of their environment confidential from cloud consumers. This makes it difficult for customer to assess the threats, risks and vulnerabilities of those environments. In addition to this, service provider also have to prioritize the problems they solve first as risks are realized, these priorisations might not be openly communicated. These lead to a situation where customer has to rely and trust on the service provider when doing their risk assessments. Net result of this should be that the accountability and trust are mandatory factors to consider before customer should go forward with a cloud approach. (Cayirci, 2015)
+In general, decisions related to compliance and security would ideally be backed by risks. To this end, it is important to have accurate understanding of the risks one is ascertaining, as this will make the organization's security policy more effective.
+For this to happen it is essential to understand the concept of risk. Risk could be defined as a possibility of suffering harm for particular asset, asset being anything of value. Value of asset could be interpreted as time and resources required to rebuild or restore the asset to its former state. Vulnerability on the other hand is a known weakness in that particular asset that could lead to the exploitation of the asset in question. All of this can be put into a form of a equation: $risk = threat x vulnerability + asset value$.(Bejtlich, 2004)
+In practice this means that one should identify the key assets, how to handle them and what risks they may pose before spending any money on security. This is is called risk analysis and it can be used to identify where the organization should put their focus on in terms of security. Risk analysis will likely not be perfect given the apparent fuzziness of measuring a risk, yet it will provably be better than any guesswork, especially when adapted to each organization and repeated at regular intervals so that it matches the reasonably current situation. Valuable risk analysis could be defined as realistic, actionable and reproducible.(Raymond Pompon, 2016)
+Unfortunately, cloud also presents extra challenge when doing risk assessments compared to traditional IT. This represents itself in a form of cloud service providers generally keeping the locations, architectures and other security details of their environment confidential from cloud consumers. This makes it difficult for customer to assess the threats, risks and vulnerabilities of those environments. In addition to this, service provider also have to prioritize the problems they solve first as risks are realized, these priorisations might not be openly communicated. These lead to a situation where the customer has to rely and trust on the service provider when doing their risk assessments. Net result of this should be that the accountability and trust are mandatory factors to consider before customer should go forward with a cloud approach. (Cayirci, 2015)
+\par
 Other way to look at the extra challenge of risk management with cloud is to say that cloud service providers design and implement their architectures and services to fit the requirements of a large pool of potential cloud customers in a way that requires the smallest possible amount of per customer customization. Ideally, the cloud service providers security and privacy controls are based on applicable laws, directives and standards while being considered for their effectiveness. Service provider does not know the specific requirements and expectations and therefore these controls provided by service provider should be seen as a generic core set. (Vacca, 2016)
 \par
-Problems aside, according to Raymond Pompon, there are essentially two kinds of risk analysis: qualitative and quantitative. Qualitative method is based on specialists doing ratings on the factors against a scale. This scale could consist of "levels", such as low, medium and high, or colors etc.
+Problems aside, according to Raymond Pompon, there are essentially two kinds of risk analysis: qualitative and quantitative. Qualitative method is based on specialists doing ratings on the factors against a scale. This scale could consist of levels, such as low, medium and high, or colors and so forth.
 Raymond Pompon also points out that due to the somewhat subjective nature of qualitative method it may need some clarifying for the ratings used. One could utilize a table with meanings, such as the following for likelihood:
 \begin{description}
-	\item[$\bullet$ Frequent] Assumed to take place more than 10 times per year
-	\item[$\bullet$ Occasional]Assumed to take place between 1 and 10 times per year
-	\item[$\bullet$ Remote] Assumed to take place between 1 time per year and once every 5 years
-	\item[$\bullet$ Very Unlikely] Assumed to take place less than once every 5 years
+	\item[$\bullet$ Frequent:] Assumed to take place more than 10 times per year
+	\item[$\bullet$ Occasional:] Assumed to take place between 1 and 10 times per year
+	\item[$\bullet$ Remote:] Assumed to take place between 1 time per year and once every 5 years
+	\item[$\bullet$ Very Unlikely:] Assumed to take place less than once every 5 years
 \end{description}
-Raymond Pompon also proposes three impact ratings: minor, major and critical. All three of those can also be split into three sub categories: confidentiality impact, integrity impact and availability impact.
-Example of confidentiality of minor scale could be under 10 database records of confidential nature being exposed internally without any proof of exploitation, while major impact of the same thing would entail that several internal employees with no authorization having accessed these records. Critical rating would be under 10 data records being exposed externally or more than 10 records exposed internally. Integrity impact follows the same guidelines but it essentially replaces the exposure of data with data being altered without authorization and whether the alteration can be detected and corrected. Availability impact is slightly different concept, minor being several users having no access for 1-5 days, or customer facing service down up to an hour. Major availability impact could be characterized as customer facing service being down for more than an hour but less than a day, critical represents a situation where customer facing service is down for more than a business day. (Raymond Pompon,2016) 
+Raymond Pompon also proposes three impact ratings: minor, major and critical. All three of these can also be split into three subcategories: confidentiality impact, integrity impact and availability impact.
+\par
+To elaborate on the impact ratings, an example of confidentiality of minor scale could be under 10 database records of confidential nature being exposed internally without any proof of exploitation, while major impact of the same thing would entail that several internal employees with no authorization having accessed these records. Critical rating would be under ten data records being exposed externally or more than ten records exposed internally. Integrity impact follows the same guidelines but it essentially replaces the exposure of data with data being altered without authorization and whether the alteration can be detected and corrected. Availability impact is slightly different concept, minor being several users having no access for from one to five days, or customer facing service down up to an hour. Major availability impact could be characterized as customer facing service being down for more than an hour but less than a day, critical represents a situation where customer facing service is down for more than a business day.(Pompon, 2016) 
 \par
 Quantitative risk analysis utilizes real statistics and data instead of subjective specialist opinions. These statistics can be collected from asset analysis and monitoring systems.
-Similarly, as with qualitative analysis organization shall match its assets against attack surface, known weaknesses and implemented controls. For example, if company hosts 10 websites (assets) it might know that on average it is missing 2 security patches on each (weakness) and the control against this weakness could be a firewall (control). Another example that follows the same lines would be: 350 (attack surface) users (asset) are subject to social engineering (weakness) but only 4\% failed the last phishing test training (control).
+Similarly, as with qualitative analysis organization shall match its assets against attack surface, known weaknesses and implemented controls. For example, if a company hosts ten websites (assets) it might know that on average it is missing two security patches on each (weakness) and the control against this weakness could be a firewall (control). Another example that follows the same lines would be: 350 (attack surface) users (asset) are subject to social engineering (weakness) but only 4 \% failed the last phishing test training (control).
 While the above gives us numbers it is likely that in the end something like security steering committee will make subjective calls, but at least they will have best possible data to base their decisions on.
 \par
 With risk and asset information at hand it is easier to select the aspects to self-assess. 
 \subsection{Controls to assess}
-According to Chris Jacksons book Network Security Auditing (2010) There are three main categories of controls:
+According to Chris Jackson's book Network Security Auditing (2010) There are three main categories of controls:
 \begin{description}
 	\item[$\bullet$ Administrative controls] are made up of policies, training and processes.
-	\item[$\bullet$ Technical controls] include technologies such as firewalls, IDS etc. that are used to implement access control.
+	\item[$\bullet$ Technical controls] include technologies such as firewalls and IDS to name but a few, which are used to implement access control.
 	\item[$\bullet$ Physical controls] are used to control the physical access to resources, for example locks and fences fall into this category.
 \end{description}
-These same categories can also be found from the Katakri tool(Katakri, 2015), Similarly these primary control groups can be further split into more granular controls:
+These same categories can also be found from the Katakri tool (Katakri, 2015), similarly these primary control groups can be further split into more granular controls:
 \begin{description}
 	\item[$\bullet$ Preventative controls] such as firewalls, login banners and policies are used to enforce confidentiality.
 	\item[$\bullet$ Detective controls] are in essence alarming mechanisms to indicate that bad things are happening.
@@ -545,6 +547,14 @@ Interleaved nature of the various controls described above provides a way to inv
 \subsection{Division of responsibility}
 \subsection{Segregation of duties}
 \subsection{Incident response}
+\subsection{Defence in depth}
+\subsection{SLA}
+\subsection{Supply chain security and continuity}
+\subsection{Personnel}
+\subsection{Encryption and key management} % Information hiding, data redundancy? Backups?
+\subsection{Lifecycle management}
+\subsection{Vulnerability and patch management}
+\subsection{Log management}
 
 \section{Conclusions}
 \begin{thebibliography}{9}
@@ -859,6 +869,13 @@ Interleaved nature of the various controls described above provides a way to inv
 	2013.
 	\textit{Supply Chain Security Using RSA Algorithm}
 	Savonia University of Applied Sciences
+\bibitem{Survey on Secure Search Over Encrypted Data on the Cloud}
+	Pham, H.,
+	Woodworth, J.,
+	Salehi, M. A.
+	2018.
+	\textit{Survey on Secure Search Over Encrypted Data on the Cloud}
+	Wiley InterScience
 \end{thebibliography}
 
 \end{document}
