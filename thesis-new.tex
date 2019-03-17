@@ -544,14 +544,14 @@ These same categories can also be found from the Katakri tool (Katakri, 2015), s
 \end{description}
 Interleaved nature of the various controls described above provides a way to investigate whether service provider, customer of application being assessed has met and implemented its controls to sufficient level. (Jackson, 2010)
 
-\section{Criteria}
+\section{Self-assessment}
 This criteria is based on key points that were found the most important from the literature and covered throughout this thesis. In some areas ideas behind Katakri 2015 are followed, yet as this criteria's target audience is not officials but instead common businesses, organizations and individuals, several topics from Katakri are out of scope. Yet, as this criteria is based on common topics, this applies to official data as well.
 \par
 The criteria is divided into three sections: administrative, physical and information technology sections. In this thesis, each of the criteria within the sections is described in relation to this thesis. In addition, a spread sheet for self-assessment purposes is distributed as an attachment.
 \subsection{Administrative topics}
 
 \subsubsection{Documentation}
-When it comes to transferring data and services to cloud, it is important that the customer understands the type of the cloud that is used and its features, possibilities and threats. To success in these matters, several documents should exist to write down the needs and restrictions and to show that the cloud's distinctive features are understood. The following documents are an example of written acknowledgement of fulfilling this:
+When it comes to transferring data and services to cloud, it is important that the customer understands the type of the cloud that is used and its features, possibilities and threats, which are described in sections two and three in this document. To succeed in these matters, several documents should exist to write down the needs and restrictions and to show that the cloud's distinctive features are understood. The following documents are an example of written acknowledgement of fulfilling this:
 \begin{description}
 	\item[$\bullet$ BCP] - Business continuity plan.
 	\item[$\bullet$ DRP] - Disaster recovery plan.
@@ -559,9 +559,21 @@ When it comes to transferring data and services to cloud, it is important that t
 	\item[$\bullet$ RPO] - Recovery point objective.
 	\item[$\bullet$ Risk analysis].
 \end{description}
+\par
+As described in section 3.1, business continuity plan aims at ensuring the organization's ability to function in case of a disaster. It will also describe certain important roles among the personnel and notify different systems and infrastructure that is needed both in the normal operations and during a disaster. Disaster recovery plan provides further details to ensure the safety of business and personnel.
+\par
+The RTO and RPO requirements describe in sections 3.1.1 and 3.1.2 can have much value in a cloud environment, especially as cloud services are usually meant to be online and accessible around the clock. Also, as the cloud provider is usually a different entity, these documents can aid in choosing a suitable service provider and guide the organization in making the contract with the provider. Written RTO and RPO can also help in monitoring the service later on, especially after an incident requiring a realization of recovery needs.
+\par
+As cloud creates new risks with the new possibilities, a sufficient risk analysis documentation can help recognizing what measures are needed to protect the service and data. A comprehensive risk analysis should also recognize the distinctive features of the chosen cloud deployment method described in 2.2 and hosting type described in 2.1. A wide variety of things to consider in their security are described through sections from 3.3 to 3.8.
 % BCP, DRP, RTO, RPO, cloud type
 \subsubsection{SLA}
 \subsubsection{Transferability}
+As cloud is meant to be agile, it is important to ensure that data and services can be easily transferred. Thus, as it is a basic feature of a cloud that the capacity can be increased and decreased in the case of need, it is important that this is ensured in contracts and chosen technologies. It is also important to be able to transfer a service elsewhere, if for example a service provider ceases to exist or doesn't meet requirements, to name a few examples. Transferability can especially help fighting a possible vendor lock-in situation. Some key points can be picked from chapter 3.2.1 Vendor lock-in:
+\begin{description}
+	\item[$\bullet$ Ensure common standards are used]
+	\item[$\bullet$ Ensure common protocols are used]
+	\item[$\bullet$ Ensure policies won't prevent data transferral]
+\end{description}
 \subsubsection{Regulations}
 \subsubsection{Division of responsibility}
 \subsubsection{Personnel}
