@@ -646,12 +646,28 @@ A way to validate that defence in depth is in use, could be to verify if there i
 \subsubsection{Segregation of duties}
 The chapter 3.2.5 explains the basics for the need of segragating different duties in different environments. The customer should ensure that the same person can't for example initiate and accept the same transaction. The requirement of segregating of duties applies to both customer and service provider and this should be ensured to minimize any potentially malicious actions.
 Good examples in the cloud concept could be for example ensuring that:
-begin{description}
+\begin{description}
 	\item[$\bullet$ A single person] can not access all steps of for example a log transfer.
 	\item[$\bullet$ The provider's] policies, ability and strategy are satisfactory.
 \end{description}
 
 \subsubsection{Encryption and key management} % Information hiding, data redundancy? Backups?
+As in cloud the data practically never resides in the customer's isolated protected zone, the data should be encrypted whenever possible, as described in chapter 3.9.5. To ensure this is done, there should be a decent documentation displaying all data locations and data flows. It should be also ensured that the encryption algorithms used in all locations and connections are decent ones, for example AES, but should always be according to regulations and recommendations. The software used to do the encryption should be of good reputation and according to regulations, if possible accepted by national authorities, as encryption software is known to often have problems.
+\par
+To ensure proper security, key management is a vital part of proper encryption. Firstly, the keys used should be of acceptable length, for example following regulations or current recommendations. The same applies to the frequency of key renewals. The keys should always be kept very secure and there should be minimal risk of their exposal to unauthorized actors, as described in 3.9.6. Additional focus should be targeted also to the service provider, as they might have open access to for example devices and network.
+\par
+In addition to key management and encryption as such, it should be ensured that no encryption keys are sent or visible by mistake. This might require ensuring for example the behaviour of software, configuration, key locations and network access. Also, it should be ensured that no sensitive data is transferred via unencrypted channels like email.
+\par
+In some cases other means than encryption could also work. Cloud and technology in general will evolve and there might be other decent methods to secure data, which could be sufficient to some cases, for example the information could be hidden inside huge junks of data.
+
+\subsubsection{Backups}
+Although the cloud has brought in many new features, the challenge of backing up data still persists, as cloud providers don't necessarily provide any features like this. Cloud may provide many possibilities in addition to the old fashioned backups as described in chapter 3.9.9, but nevertheless it must be ensured that the chosen mean is usable and reliable in any scenarios. To ensure recovery of data, the customer should ensure if for example one of these methods is in use:
+\begin{description}
+	\item[$\bullet$ Backup] to a geographically separate location using for example traditional backup systems.
+	\item[$\bullet$ Replicating] a necessary part of the service and data to a separate location or different availability zones.
+\end{description}
+It should also be ensured that in case of a complete data loss the recovery can be done, this means that the data is in such a format that it is usable in different platforms and that the data can be transferred from the backup system to the new production environment.
+
 \subsubsection{Lifecycle management}
 \subsubsection{Vulnerability and patch management}
 \subsubsection{Log management}
