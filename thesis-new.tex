@@ -644,7 +644,7 @@ Supply chain is a commonly known risk factor, as depicted in chapter 3.9.3. In a
 Defence in depth is a common concept in information technology and it involves zoning of the architecture into smaller parts, as described in chapter 3.9.1. Creating multiple layers of security can help during the incident when protecting more sensitive parts of the infrastructure or operations via creating more capabilities to withstand attacks.
 Based on Katakri 2015, components like network, could be divided into different zones applying the same defence-in-depth method to this concrete design to protect more sensitive data.
 \par
-A way to validate that defence in depth is in use, could be to verify if there is for example some isolation between different segments via firewalls and VPNs to name a few. On the other hand, also the existence of several different methods of protection could be a visible proof of such actions, these could be for example including user policy, firewalls and virus detection to protect a single machine.
+A way to validate that defence in depth is in use, could be to verify if there is for example some isolation between different segments, like demilitarized zone and internal zone, via firewalls and VPNs to name a few as described in chapter 3.9.13. On the other hand, also the existence of several different methods of protection could be a visible proof of such actions, these could be for example including user policy, firewalls, intrusion detection system and virus detection to protect a single machine.
 
 \subsubsection{Segregation of duties}
 The chapter 3.2.5 explains the basics for the need of segragating different duties in different environments. The customer should ensure that the same person can't for example initiate and accept the same transaction. The requirement of segregating of duties applies to both customer and service provider and this should be ensured to minimize any potentially malicious actions.
@@ -659,7 +659,7 @@ As in cloud the data practically never resides in the customer's isolated protec
 \par
 To ensure proper security, key management is a vital part of proper encryption. Firstly, the keys used should be of acceptable length, for example following regulations or current recommendations. The same applies to the frequency of key renewals. The keys should always be kept very secure and there should be minimal risk of their exposal to unauthorized actors, as described in 3.9.6. Additional focus should be targeted also to the service provider, as they might have open access to for example devices and network.
 \par
-In addition to key management and encryption as such, it should be ensured that no encryption keys are sent or visible by mistake. This might require ensuring for example the behaviour of software, configuration, key locations and network access. Also, it should be ensured that no sensitive data is transferred via unencrypted channels like email.
+In addition to key management and encryption as such, it should be ensured that no encryption keys are sent or visible by mistake. This might require ensuring for example the behaviour of software, configuration, key locations and network access. Also, it should be ensured that no sensitive data is transferred via unencrypted channels like email. In addition to adding more reliance to network, properly planning the network can add to security, as described in chapter 3.9.12. In many cases encryption of connections can be applied in network devices in the means of for example MACSEC or IPSEC, although this can not necessarily be applied to data transfers inside the data centers.
 \par
 In some cases other means than encryption could also work. Cloud and technology in general will evolve and there might be other decent methods to secure data, which could be sufficient to some cases, for example the information could be hidden inside huge junks of data.
 
@@ -688,7 +688,19 @@ During production state the lifecycle management should ensure that business pro
 \par
 The decommissioning phase is the final step in the service lifecycle. The customer should ensure that the outdated service is properly removed, the data disposed of or transferred securely. The lifecycle management process should ensure that no services are just forgotten, as this may pose an unnecessary business and security related risk.
 
+\subsubsection{Hardening}
+Often in cloud environment the service provider might be providing the disk images as described in chapter 3.9.14. The customer should not forget that also in SaaS deployments - not only in IaaS and PaaS - the virtual machine still runs an operating system. To verify that the virtual machine images can be trusted, the following details at least should be checked:
+\begin{description}
+	\item[$\bullet$ Processes], contracts or similar methods exist to define secure sources for images.
+	\item[$\bullet$ The images] used in virtual machines are according to customer requirements.
+\end{description}
+For example, the images might be required to be hardened or patched in a certain manner or frequency, which should be also monitored.
+
 \subsubsection{Vulnerability and patch management}
+The customer should ensure that proper management of patches and updates are applied by both the customer itself and also the service provider, the details vary greatly depending on the chosen deployment. As described in chapter 3.9.15 also the underlying infrastructure should be patched in a timely manner, not alone the services running on top of them. This should be in the service provider policies.
+\par
+To help with the vulnerability and patch management automated security scans should be used. These could be done in an agreed and timely manner over the entire network and independent servers. A proper scan should include all, including the management platforms, servers and possible network devices, not forgetting the customer's services built on them.
+
 
 \subsubsection{Log management}
 
