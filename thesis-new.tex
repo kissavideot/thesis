@@ -701,8 +701,12 @@ The customer should ensure that proper management of patches and updates are app
 \par
 To help with the vulnerability and patch management automated security scans should be used. These could be done in an agreed and timely manner over the entire network and independent servers. A proper scan should include all, including the management platforms, servers and possible network devices, not forgetting the customer's services built on them.
 
-
 \subsubsection{Log management}
+Logs can play an important part in all service monitoring and security. The customer should ensure that the logging infrastructure is decent to provide logging for for example service optimization, debugging and also about events of security compromizations, as described in 3.9.16.
+\par
+As the size of logs are easily enormous, the customer might have a need to have proper systems to also analyze the log files. The logs should also be properly configured to provide the necessary information throughout the system. Log files must be safeguarded against tampering to ensure authenticity of the logged actions. In a cloud environment many of the log files can be out of the customer's reach directly, in this case there should be policies for the service provider to provide the necessary information without possible exposing data from other tenants sharing the infrastructure.
+\par
+As usual, the log files may contain sensitive information. Thus any transfer or storage of log files should be properly protected from unauthorized access throughout the entire lifetime. Also the log servers should be heavily protected so that for example the proof of a security breach can't be easily wiped out by the malicious actor. There might also be some regulation like what is found from Katakri 2015 which regulates the storing time of logs.
 
 \section{Conclusions}
 \begin{thebibliography}{9}
