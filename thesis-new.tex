@@ -574,12 +574,18 @@ As cloud is meant to be agile, it is important to ensure that data and services 
 	\item[$\bullet$ Ensure common protocols are used]
 	\item[$\bullet$ Ensure policies won't prevent data transferral]
 \end{description}
-\subsubsection{Regulations}
-Especially as cloud can be often hosted in distinctive geographical locations as stated in 1.2.2, reviewing possible legislative and regulatory limitations is essential, as described in 3.2.2. To succeed in reviewing the requirements, it is self-evident and mandatory that the data, customers and other possible factors are recognized to successfully recognize the relevant regulation. In Finland, the customer must especially recognize the possible use of personal data, where GDPR will have major consequences. Another examples are certain types of data and customers, which have to follow criterias or recommendations like Katakri or VAHTI.
-\par
-The customer should note that regulations may also change as they knowingly do, and additionally they might impact the requirements through the entire lifecycle of the service and data (Katakri, 2015). Thus a frequent review process of these should be in place to fully ensure meeting the requirements through all times.
 
-\subsubsection{Division of responsibility}
+\par
+The ability to transfer services from a provider to another is not only about using certain formats and standards, but also the many functionalities and features below this. As described in 3.2.4, division of responsibility plays major role in preparing for disasters and for ensuring recovery, which can be also about moving the service around. As the responsibilities of data and service are shared between the customer and service provider, there should be a clear understanding on duties that falls into either one's field. Furthermore, the customer should have some means in place to realistically be able to transfer the service to another providers infrastructure in case of need.
+
+\subsubsection{Regulations}
+Especially as cloud can be often hosted in distinctive geographical locations as stated in 1.2.2, reviewing possible legislative and regulatory limitations is essential, as described in 3.2.2 and 3.2.3. To succeed in reviewing the requirements, it is self-evident and mandatory that the data, customers and other possible factors are recognized to successfully recognize the relevant regulation. As described in 3.2.3, the data recidency has a major role as laws and regulations can greatly vary in different countries and as a result the country's regulations must be studied to ensure following the local limitations. In Finland, the customer must especially recognize the possible use of personal data, where GDPR will have major consequences. Another examples are certain types of data and customers, which have to follow criterias or recommendations like Katakri or VAHTI.
+\par
+The customer should note that regulations may also change as they knowingly do, and additionally they might impact the requirements through the entire lifecycle of the service and data (Katakri, 2015). Thus a frequent review process of these should be in place to fully ensure meeting the requirements through all the lifetime of the service and data.
+
+
+
+
 \subsubsection{Personnel}
 \subsubsection{Incident response}
 
@@ -597,6 +603,13 @@ begin{description}
 \subsection{Information technology}
 \subssubection{Defence in depth}
 \subsubsection{Segregation of duties}
+The chapter 3.2.5 explains the basics for the need of segragating different duties in different environments. The customer should ensure that the same person can't for example initiate and accept the same transaction. The requirement of segregating of duties applies to both customer and service provider and this should be ensured to minimize any potentially malicious actions.
+Good examples in the cloud concept could be for example ensuring that:
+begin{description}
+	\item[$\bullet$ A single person] can not access all steps of for example a log transfer.
+	\item[$\bullet$ The provider's] policies, ability and strategy are satisfactory.
+\end{description}
+
 \subsubsection{Encryption and key management} % Information hiding, data redundancy? Backups?
 \subsubsection{Lifecycle management}
 \subsubsection{Vulnerability and patch management}
