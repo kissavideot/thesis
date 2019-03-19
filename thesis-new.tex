@@ -564,9 +564,21 @@ As described in section 3.1, business continuity plan aims at ensuring the organ
 \par
 The RTO and RPO requirements describe in sections 3.1.1 and 3.1.2 can have much value in a cloud environment, especially as cloud services are usually meant to be online and accessible around the clock. Also, as the cloud provider is usually a different entity, these documents can aid in choosing a suitable service provider and guide the organization in making the contract with the provider. Written RTO and RPO can also help in monitoring the service later on, especially after an incident requiring a realization of recovery needs.
 \par
-As cloud creates new risks with the new possibilities, a sufficient risk analysis documentation can help recognizing what measures are needed to protect the service and data. A comprehensive risk analysis should also recognize the distinctive features of the chosen cloud deployment method described in 2.2 and hosting type described in 2.1. A wide variety of things to consider in their security are described through sections from 3.3 to 3.8.
+As cloud creates new risks with the new possibilities, a sufficient risk analysis documentation can help recognizing what measures are needed to protect the service and data. A comprehensive risk analysis should also recognize the distinctive features of the chosen cloud deployment method described in 2.2 and hosting type described in 2.1. A wide variety of things to consider in their security are described through sections from 3.3 to 3.8. Although private cloud can greatly resemble a traditional self hosted environment, especially public cloud brings new risks the analysis should be aware of:
+\begin{description}
+	\item[$\bullet$ Multi-tenancy], as different customers may have access to the same infrastructure, including for example APIs and hypervisors.
+	\item[$\bullet$ Certain responsabilities] now fall into the service provider's field, including patching and updating servers.
+	\item[$\bullet$ Geographical location] may vary, as described in 3.2.2 and 3.2.3.
+	\item[$\bullet$ A malicious actor] has many of the same advantages as the customer.
+\end{description}
+
+Nevertheless, as the private cloud does not necessarily impose the aforementioned risks, it may not provide the expandability the public cloud offers, which often might be one of the key reasons to choose using a cloud service in the first place.
+A thing to consider with the chosen deployment method from the risk perspective could be for example the responsibilities and capabilities. A variety of tasks are now on the service provider, yet the ability for the customer to modify the services might be limited although possibly less demanding.
+
 % BCP, DRP, RTO, RPO, cloud type
 \subsubsection{SLA}
+
+
 \subsubsection{Transferability}
 As cloud is meant to be agile, it is important to ensure that data and services can be easily transferred. Thus, as it is a basic feature of a cloud that the capacity can be increased and decreased in the case of need, it is important that this is ensured in contracts and chosen technologies. It is also important to be able to transfer a service elsewhere, if for example a service provider ceases to exist or doesn't meet requirements, to name a few examples. Transferability can especially help fighting a possible vendor lock-in situation. Some key points can be picked from chapter 3.2.1 Vendor lock-in:
 \begin{description}
@@ -612,7 +624,14 @@ begin{description}
 \subsubsection{Supply chain security and continuity}
 
 \subsection{Information technology}
+
+
 \subssubection{Defence in depth}
+Defence in depth is a common concept in information technology and it involves zoning of the architecture into smaller parts, as described in chapter 3.9.1. Creating multiple layers of security can help during the incident when protecting more sensitive parts of the infrastructure or operations via creating more capabilities to withstand attacks.
+Based on Katakri 2015, components like network, could be divided into different zones applying the same defence-in-depth method to this concrete design to protect more sensitive data.
+\par
+A way to validate that defence in depth is in use, could be to verify if there is for example some isolation between different segments via firewalls and VPNs to name a few. On the other hand, also the existence of several different methods of protection could be a visible proof of such actions, these could be for example including user policy, firewalls and virus detection to protect a single machine.
+
 \subsubsection{Segregation of duties}
 The chapter 3.2.5 explains the basics for the need of segragating different duties in different environments. The customer should ensure that the same person can't for example initiate and accept the same transaction. The requirement of segregating of duties applies to both customer and service provider and this should be ensured to minimize any potentially malicious actions.
 Good examples in the cloud concept could be for example ensuring that:
