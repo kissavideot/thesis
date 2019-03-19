@@ -558,6 +558,7 @@ When it comes to transferring data and services to cloud, it is important that t
 	\item[$\bullet$ RTO] - Recovery time objective.
 	\item[$\bullet$ RPO] - Recovery point objective.
 	\item[$\bullet$ Risk analysis].
+	\item[$\bullet$ Infrastructure] and service documentation.
 \end{description}
 \par
 As described in section 3.1, business continuity plan aims at ensuring the organization's ability to function in case of a disaster. It will also describe certain important roles among the personnel and notify different systems and infrastructure that is needed both in the normal operations and during a disaster. Disaster recovery plan provides further details to ensure the safety of business and personnel.
@@ -574,6 +575,8 @@ As cloud creates new risks with the new possibilities, a sufficient risk analysi
 
 Nevertheless, as the private cloud does not necessarily impose the aforementioned risks, it may not provide the expandability the public cloud offers, which often might be one of the key reasons to choose using a cloud service in the first place.
 A thing to consider with the chosen deployment method from the risk perspective could be for example the responsibilities and capabilities. A variety of tasks are now on the service provider, yet the ability for the customer to modify the services might be limited although possibly less demanding.
+\par
+In addition to administrative documentation, it is vital to have decent description of the service and data. This documentation is needed throughout this self assessment to verify that the needs are met. From this documentation the customer can for example spot the data locations, connections and possible data replication.
 
 % BCP, DRP, RTO, RPO, cloud type
 \subsubsection{SLA}
@@ -668,8 +671,25 @@ Although the cloud has brought in many new features, the challenge of backing up
 \end{description}
 It should also be ensured that in case of a complete data loss the recovery can be done, this means that the data is in such a format that it is usable in different platforms and that the data can be transferred from the backup system to the new production environment.
 
+\subsubsection{Authentication}
+As described in chapter 3.9.10, proper authentication and identification should be in place. The authentication should be verified throughout the service, as a result of which the customer should ensure that the services provided by the cloud service provider also comply with the necessary authentication and identification requirements. Two factor authentication is a preferred method when applicable. As a conclusion, at least the following should be ensured:
+\begin{description}
+	\item[$\bullet$ Logon ID] does not consist of person's name, title or similar easily accessible data.
+	\item[$\bullet$ Authentication] should be constructed using at least on of the following: something the user knows, the user has or is unique to each user.
+	\item[$\bullet$ Authentication] data is protected like sensitive data (Katakri, 2015).
+	\item[$\bullet$ Authentication] is needed to identify the user in all necessary actions (Katakri, 2015).
+\end{description}
+Even more requirements can be added if for example applicable regulations state so.
+
 \subsubsection{Lifecycle management}
+Even though the implementation of a service is a very important concept, the maintenance and decommissioning play equally as important role, as described in chapter 3.9.11. The organization should ensure that it has an up to date registry of all the services and systems properly set up and maintained. To succeed in setting up a new service according to business needs the service specifications should be properly described, this can also help later during the lifetime.
+\par
+During production state the lifecycle management should ensure that business processes are properly executed on the service. During runtime the service should be monitored, both from the business perspective and operational state, which can also add to security. Proper data can also help the customer recognizing that contracts - like SLA - are respected.
+\par
+The decommissioning phase is the final step in the service lifecycle. The customer should ensure that the outdated service is properly removed, the data disposed of or transferred securely. The lifecycle management process should ensure that no services are just forgotten, as this may pose an unnecessary business and security related risk.
+
 \subsubsection{Vulnerability and patch management}
+
 \subsubsection{Log management}
 
 \section{Conclusions}
