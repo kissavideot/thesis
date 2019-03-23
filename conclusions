@@ -6,7 +6,8 @@ Although the criteria in Katakri 2015 was a big motivator on this, it was clear 
 
 Another motivator was the Cloud Alliance's form. We went through it with much detail, although this work didn't find its way to this thesis. Nevertheless, many of the core topics can be found in here. The biggest challenge with the Cloud Alliance's material is the mere size of it: dozens and dozens of criterion makes it purely exhausting. We didn't want that as if something is too complex, who has the time and willingness to do it well or worse, to do it at all.
 
-In the end, we are quite happy with some of the criterion, but there are some flaws also. We managed to keep the criteria in a manageable amount, yet in our material some obvious details were neglected, like NTP (yes, it is important especially in logs!). Although we would have wanted to add several details here and there, we left them out because of the fact that these weren't mentioned in the source material.
+In the end, we are quite happy with some of the criterion, but there are some flaws also. We managed to keep the criteria in a manageable amount, yet in our material some obvious details were neglected, like NTP (yes, it is important especially in logs!) and especially to administration connections, which is one of the top three things to secure. Although we would have wanted to add several details here and there, we left them out because of the fact that these weren't mentioned (properly) in the source material, yet a skilled technician can understand that at least these two examples are a part of logging and encryption/defence in depth.
 
-
+- Cloud security criteria by Traficom - analysis against the newest version
+- Perfect security in cloud can never be achieved as it is a mixture of technical and contractual world (+ trust etc.). But, new technologies must be adapted and as cloud is more than technical, you have to think outside of just information technology (it is also a business model).
 
