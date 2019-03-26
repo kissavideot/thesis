@@ -560,7 +560,7 @@ When it comes to transferring data and services to cloud, it is important that t
 	\item[$\bullet$ DRP] - Disaster recovery plan.
 	\item[$\bullet$ RTO] - Recovery time objective.
 	\item[$\bullet$ RPO] - Recovery point objective.
-	\item[$\bullet$ Risk analysis].
+	\item[$\bullet$ Risk analysis.]
 	\item[$\bullet$ Infrastructure] and service documentation.
 \end{description}
 \par
@@ -568,7 +568,7 @@ As described in section 3.1, business continuity plan aims at ensuring the organ
 \par
 The RTO and RPO requirements describe in sections 3.1.1 and 3.1.2 can have much value in a cloud environment, especially as cloud services are usually meant to be online and accessible around the clock. In addition, as the cloud provider is usually a different entity, these documents can aid in choosing a suitable service provider and guide the organization in making the contract with the provider. Written RTO and RPO can also help in monitoring the service later on, especially after an incident requiring a realization of recovery needs. Similarly, written RTO and RPO can be tied to the possible service level agreement as parts of the criteria.
 \par
-As cloud creates new risks with the new possibilities, a sufficient risk analysis documentation can help recognizing what measures are needed to protect the service and data. A comprehensive risk analysis should also recognize the distinctive features of the chosen cloud deployment method described in 2.2 and hosting type described in 2.1. A wide variety of issues to consider in their security are described through sections from 3.3 to 3.8. Although private cloud can greatly resemble a traditional self-hosted environment, especially public cloud brings new risks the analysis should be aware of:
+As cloud creates new risks with the new possibilities, a sufficient risk analysis documentation can help recognizing what measures are needed to protect the service and data, this is discussed in detail in section 4.3. A comprehensive risk analysis should also recognize the distinctive features of the chosen cloud deployment method described in 2.2 and hosting type described in 2.1. A wide variety of issues to consider in their security are described through sections from 3.3 to 3.8. Although private cloud can greatly resemble a traditional self-hosted environment, especially public cloud brings new risks the analysis should be aware of:
 \begin{description}
 	\item[$\bullet$ Multi-tenancy], as different customers may have access to the same infrastructure, including for example APIs and hypervisors.
 	\item[$\bullet$ Certain responsibilities] now fall into the service provider's field, including patching and updating servers.
@@ -671,7 +671,7 @@ Although the cloud has brought in many new features, the challenge of backing up
 	\item[$\bullet$ Backup] to a geographically separate location using for example traditional backup systems.
 	\item[$\bullet$ Replicating] a necessary part of the service and data to a separate location or different availability zones.
 \end{description}
-It should also be ensured that in case of a complete data loss the recovery can be done, this means that the data is in such a format that it is usable in different platforms and that the data can be transferred from the backup system to the new production environment.
+It should also be ensured that in case of a complete data loss the recovery can be done, this means that the data is in such a format that it is usable in different platforms and that the data can be transferred from the backup system to the new production environment. To ensure this, a frequent recovery test can act as a decent proof that the backup system meets the needs.
 
 \subsubsection{Authentication}
 As described in chapter 3.9.10, proper authentication and identification should be in place. The authentication should be verified throughout the service, as a result of which the customer should ensure that the services provided by the cloud service provider also comply with the necessary authentication and identification requirements. Two-factor authentication is a preferred method when applicable. As a conclusion, at least the following should be ensured:
@@ -693,7 +693,7 @@ The decommissioning phase is the final step in the service lifecycle. The custom
 \subsubsection{Hardening}
 Often in cloud environment, the service provider might be providing the disk images as described in chapter 3.9.14. The customer should not forget that also in SaaS deployments, not only in IaaS and PaaS, the virtual machine still runs an operating system. To verify that the virtual machine images can be trusted, the following details at least should be checked:
 \begin{description}
-	\item[$\bullet$ Processes], contracts or similar methods exist to define secure sources for images.
+	\item[$\bullet$ Processes,] contracts or similar methods exist to define secure sources for images.
 	\item[$\bullet$ The images] used in virtual machines are according to customer requirements.
 \end{description}
 For example, the images might be required to be hardened or patched in a certain manner or frequency, which should be also monitored.
