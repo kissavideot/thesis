@@ -723,9 +723,7 @@ As the size of logs are easily enormous, the customer might have a need to have 
 As usual, the log files may contain sensitive information. Thus, any transfer or storage of log files should be properly protected from unauthorized access throughout the entire lifetime. In addition, the log servers should be heavily protected so that for example the proof of a security breach can not be easily wiped out by the malicious actor. There might also be some regulation that is found in Katakri 2015 which regulates the storing time of logs.
 
 \section{Conclusions}
-Even though the cloud as a technology has been existing for several years, there are still surprisingly little material available in terms of audit criterion, this became a reality when autho
-rs started to gather material for this thesis. Especially the security in cloud seems to be investigated quite little, even though there is definitely need for this. However, as there was rat
-her limited material to use for this cloud security survey, especially given the confidential nature of the questionnaire, the shortcomings were seen more like a challenge and something that
+Even though the cloud as a technology has been existing for several years, there are still surprisingly little material available in terms of audit criterion, this became a reality when authors started to gather material for this thesis. Especially the security in cloud seems to be investigated quite little, even though there is definitely need for this. However, as there was rather limited material to use for this cloud security survey, especially given the confidential nature of the questionnaire, the shortcomings were seen more like a challenge and something that
 we took as a sign of need for the thesis.
  The shortage of material wasn't the only challenge as the material we found was often written from different standpoint. As this thesis was made by two technically oriented professionals, the
  lack of real-life experience of many writers was quite disturbing. Nonetheless, from the material a few real treasures were found, such as Halpert's book of cloud security and privacy, also
@@ -734,31 +732,23 @@ ions for basic concepts of the cloud. While not maybe 100% cloud related the IET
 uating if a solution proposed by service provider is compliant with the standards. Also, as our focus was strongly from the audit perspective, many of the sources seemed quite shallow and eve
 n naive.
 \par
-Although the aging criteria in Katakri 2015 was a big motivator on this, it was clear that it wouldn't fully benefit the target audience as such, as many of the criterion in it are too comple
-x, controversial or just simply too tight for trivial business use-cases. Nevertheless, during the writing process of this thesis, there was an ongoing debate with a cloud criteria going on i
-n Traficom, which we provided some feedback to.
-Another motivator was the Cloud Alliance's form. We went through it with much detail, although this work didn't find its way to this thesis. Nevertheless, many of the core topics can be found
- in here. The biggest challenge with the Cloud Alliance's material is the mere size of it: dozens and dozens of criterion makes it purely exhausting. One of the key aspects to this work was t
-o avoid coming up with too technical audit criterion, this was deemed as especially important in order to avoid non-technical parties being "scared" with audit text. Authors tried to compensa
+Although the aging criteria in Katakri 2015 was a big motivator on this, it was clear that it wouldn't fully benefit the target audience as such, as many of the criterion in it are too complex, controversial or just simply too tight for trivial business use-cases. Nevertheless, during the writing process of this thesis, there was an ongoing debate with a cloud criteria going on in Traficom, which we provided some feedback to.
+Another motivator was the Cloud Alliance's Cloud control matrix. We went through it with much detail, although this work didn't find its way to this thesis. Nevertheless, many of the core topics can be found
+ in here. The biggest challenge with the Cloud Alliance's Cloud control matrix is the mere size of it: dozens and dozens of criterion makes it purely exhausting. One of the key aspects to this work was to avoid coming up with too technical audit criterion, this was deemed as especially important in order to avoid non-technical parties being "scared" with audit text. Authors tried to compensa
 te on this with more detailed introduction to cryptography and the availability aspects within networking.
 In the end, we are quite happy with some of the criterion, but there are some flaws also. We managed to keep the criteria in a manageable amount, yet in our material some obvious details were
  neglected, similar to network time protocol or precision time protocols, as it is important particularly in logs. In addition to missing network time protocol, also and protecting administra
 tion connections, which is one of the top three things to secure, is neglected, yet a knowledgeable person would most likely include this into defense-in-depth. Although we would have wanted
-to add several details here and there, we left them out because of the fact that these were not mentioned in the source material, yet a skilled technician can understand that at least these t
-wo examples are a part of logging and encryption/defense in depth.
+to add several details here and there, we left them out because of the fact that these were not mentioned in the source material, yet a skilled technician can understand that at least these two examples are a part of logging and encryption/defense in depth.
 \par
-During the time of writing, Traficom's cloud criteria was worked upon. As one can guess from Katakri, certain administrative issues are covered there in more detail as well as personnel relat
-ed issues, as these requirements often come strongly from legislation e.g. the "need to know" principle. For the same reason data classification and separation is emphasized. These difference
+During the time of writing, Traficom's cloud criteria was worked upon. As one can guess from Katakri, certain administrative issues are covered there in more detail as well as personnel related issues, as these requirements often come strongly from legislation e.g. the "need to know" principle. For the same reason data classification and separation is emphasized. These difference
 s are very natural and are to be expected. Yet, topics like secure development conventions missing in this thesis is a bit annoying fact, though it is natural when judging the source material
- - secure development conventions aren't seen as a cloud related topic but instead, a software development related topic. A major flaw in all criterias and assessments is their long update pr
-ocedure - they do now react to new emerging threats very fast. It is a hard topic to figure out how to expect or even demand something that is during the publication time completely vague. Ma
-ybe these could be derived from awareness, roles and training, but this would still be quite superficial.
+ - secure development conventions aren't seen as a cloud related topic but instead, a software development related topic. A major flaw in all criterias and assessments is their long update procedure - they do now react to new emerging threats very fast. It is a hard topic to figure out how to expect or even demand something that is during the publication time completely vague. Maybe these could be derived from awareness, roles and training, but this would still be quite superficial.
 \par
 In a cloud environment, as well as actually any environment that is not very simple and thus self-evident, it is not possible to achieve perfect security. The correct way of thinking might be
- to mix both technical and contractual details to gain sufficient level of trust, this viewpoint can be in our opinion derived from lot of the cloud material available, as this thesis has pin
-pointed several issues related to that and, and also from the fact that e.g. the cloud alliance cloud criteria and Traficom's work address legislative and contractual details quite strongly.
-As new technologies emerge in huge speed and there is often a lot of pressure to adapt these to different environments, one should probably try to think modern IT systems from the business po
-int of view, not just from technological viewpoint. In this possibilities, contracts and different actors playing together can create a secure and prudent environment.
+ to mix both technical and contractual details to gain sufficient level of trust, this viewpoint can be in our opinion derived from lot of the cloud material available, as this thesis has pinpointed several issues related to that and, and also from the fact that e.g. the cloud alliance cloud criteria and Traficom's work address legislative and contractual details quite strongly.
+As new technologies emerge in huge speed and there is often a lot of pressure to adapt these to different environments, one should probably try to think modern IT systems from the business point of view, not just from technological viewpoint. In this possibilities, contracts and different actors playing together can create a secure and prudent environment.
+
 \begin{thebibliography}{9}
 \makeatletter
 \def\@biblabel#1{}
